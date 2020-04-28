@@ -1,0 +1,22 @@
+.SectionMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $color-red;
+
+  &__title {
+  }
+
+  &__copy {
+    line-height: 2;
+
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 100px;
+    }
+  }
+}
