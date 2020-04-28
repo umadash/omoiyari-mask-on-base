@@ -5,18 +5,16 @@
 /**
 * 絶対位置で配置する
 */
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-/* line 9, _src/sass/utils/_reset.scss */
+/* line 6, _src/sass/utils/_reset.scss */
 html,
 body,
 div,
 span,
+applet,
 object,
 iframe,
 h1,
@@ -28,8 +26,11 @@ h6,
 p,
 blockquote,
 pre,
+a,
 abbr,
+acronym,
 address,
+big,
 cite,
 code,
 del,
@@ -39,14 +40,19 @@ img,
 ins,
 kbd,
 q,
+s,
 samp,
 small,
+strike,
 strong,
 sub,
 sup,
+tt,
 var,
 b,
+u,
 i,
+center,
 dl,
 dt,
 dd,
@@ -69,13 +75,16 @@ article,
 aside,
 canvas,
 details,
-figcaption,
+embed,
 figure,
+figcaption,
 footer,
 header,
 hgroup,
 menu,
 nav,
+output,
+ruby,
 section,
 summary,
 time,
@@ -85,18 +94,13 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
-  background: transparent;
 }
 
-/* line 87, _src/sass/utils/_reset.scss */
-body {
-  line-height: 1;
-}
-
-/* line 91, _src/sass/utils/_reset.scss */
+/* HTML5 display-role reset for older browsers */
+/* line 95, _src/sass/utils/_reset.scss */
 article,
 aside,
 details,
@@ -111,18 +115,24 @@ section {
   display: block;
 }
 
-/* line 105, _src/sass/utils/_reset.scss */
-nav ul {
+/* line 108, _src/sass/utils/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 111, _src/sass/utils/_reset.scss */
+ol,
+ul {
   list-style: none;
 }
 
-/* line 109, _src/sass/utils/_reset.scss */
+/* line 115, _src/sass/utils/_reset.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 114, _src/sass/utils/_reset.scss */
+/* line 119, _src/sass/utils/_reset.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -131,65 +141,10 @@ q:after {
   content: none;
 }
 
-/* line 122, _src/sass/utils/_reset.scss */
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-/* line 131, _src/sass/utils/_reset.scss */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-/* line 138, _src/sass/utils/_reset.scss */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* line 145, _src/sass/utils/_reset.scss */
-del {
-  text-decoration: line-through;
-}
-
-/* line 149, _src/sass/utils/_reset.scss */
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-/* line 155, _src/sass/utils/_reset.scss */
+/* line 126, _src/sass/utils/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-/* line 161, _src/sass/utils/_reset.scss */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/* line 170, _src/sass/utils/_reset.scss */
-input,
-select {
-  vertical-align: middle;
 }
 
 /* line 1, _src/sass/utils/_base.scss */
