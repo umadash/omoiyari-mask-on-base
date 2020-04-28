@@ -383,3 +383,24 @@ a:hover {
     padding: 0 16px;
   }
 }
+
+/* line 1, _src/sass/components/_SectionTitle.scss */
+.SectionTitle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/* line 6, _src/sass/components/_SectionTitle.scss */
+.SectionTitle__jp {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.333;
+}
+/* line 11, _src/sass/components/_SectionTitle.scss */
+.SectionTitle__en {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #ed1c23;
+}

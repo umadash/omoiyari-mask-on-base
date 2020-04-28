@@ -1,0 +1,16 @@
+.SectionTitle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__jp {
+    @include font-size(20);
+    line-height: 1.333;
+  }
+
+  &__en {
+    @include font-size(12);
+    @include font-en-bold;
+    color: $color-red;
+  }
+}
