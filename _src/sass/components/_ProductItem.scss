@@ -1,8 +1,14 @@
 .ProductItemList {
   display: grid;
 
-  .col1 {
+  &.col1 {
     grid-template-columns: 1fr;
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      gap: 80px;
+    }
 
     > * {
       @include pc-layout {
@@ -11,7 +17,7 @@
     }
   }
 
-  .col3 {
+  &.col3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -48,6 +54,14 @@
   &__info {
     display: flex;
     flex-direction: column;
+    line-height: 1.666;
+
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 8px;
+    }
   }
 
   &__main {
@@ -65,5 +79,6 @@
 
   &__price {
     @include font-size(14);
+    margin-top: 20px;
   }
 }

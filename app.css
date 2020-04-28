@@ -288,62 +288,76 @@ a:hover {
   display: grid;
 }
 /* line 4, _src/sass/components/_ProductItem.scss */
-.ProductItemList .col1 {
+.ProductItemList.col1 {
   grid-template-columns: 1fr;
 }
 @media (min-width: 920px) {
-  /* line 7, _src/sass/components/_ProductItem.scss */
-  .ProductItemList .col1 > * {
+  /* line 4, _src/sass/components/_ProductItem.scss */
+  .ProductItemList.col1 {
+    gap: 80px;
+  }
+}
+@media (min-width: 920px) {
+  /* line 13, _src/sass/components/_ProductItem.scss */
+  .ProductItemList.col1 > * {
     max-width: 640px;
   }
 }
-/* line 14, _src/sass/components/_ProductItem.scss */
-.ProductItemList .col3 {
+/* line 20, _src/sass/components/_ProductItem.scss */
+.ProductItemList.col3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* line 19, _src/sass/components/_ProductItem.scss */
+/* line 25, _src/sass/components/_ProductItem.scss */
 .ProductItem {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-/* line 30, _src/sass/components/_ProductItem.scss */
+/* line 36, _src/sass/components/_ProductItem.scss */
 .ProductItem__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 41, _src/sass/components/_ProductItem.scss */
+/* line 47, _src/sass/components/_ProductItem.scss */
 .ProductItem__img:before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-/* line 48, _src/sass/components/_ProductItem.scss */
+/* line 54, _src/sass/components/_ProductItem.scss */
 .ProductItem__info {
   display: flex;
   flex-direction: column;
+  line-height: 1.666;
 }
-/* line 53, _src/sass/components/_ProductItem.scss */
+@media (min-width: 920px) {
+  /* line 54, _src/sass/components/_ProductItem.scss */
+  .ProductItem__info {
+    margin-top: 8px;
+  }
+}
+/* line 67, _src/sass/components/_ProductItem.scss */
 .ProductItem__main {
   display: flex;
   flex-direction: column;
 }
-/* line 58, _src/sass/components/_ProductItem.scss */
+/* line 72, _src/sass/components/_ProductItem.scss */
 .ProductItem__name {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 62, _src/sass/components/_ProductItem.scss */
+/* line 76, _src/sass/components/_ProductItem.scss */
 .ProductItem__copy {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 66, _src/sass/components/_ProductItem.scss */
+/* line 80, _src/sass/components/_ProductItem.scss */
 .ProductItem__price {
   font-size: 14px;
   font-size: 1.4rem;
+  margin-top: 20px;
 }
 
 /* line 1, _src/sass/components/_Btn.scss */
