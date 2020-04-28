@@ -1,0 +1,28 @@
+# システムファイル関連
+*~
+*.bak
+.DS_Store
+.buildpath
+.project
+.settings
+*.tmproj
+build
+.idea
+nbproject/
+Thumbs.db
+desktop.ini
+*.log
+
+# WordPress関連
+/index.php
+/.htaccess
+/.htpasswd
+/wpcms/*
+!/wpcms/wp-content
+/wpcms/wp-content/*
+!/wpcms/wp-content/themes
+/wpcms/wp-content/themes/*
+!/wpcms/wp-content/themes/tm_2020
+
+# 開発関連
+.sass-cache
