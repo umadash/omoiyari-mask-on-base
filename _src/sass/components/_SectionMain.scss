@@ -19,4 +19,13 @@
       margin-top: 100px;
     }
   }
+
+  &__btn {
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 32px;
+    }
+  }
 }

@@ -275,6 +275,12 @@ a:hover {
     margin-top: 100px;
   }
 }
+@media (min-width: 920px) {
+  /* line 23, _src/sass/components/_SectionMain.scss */
+  .SectionMain__btn {
+    margin-top: 32px;
+  }
+}
 
 /* line 1, _src/sass/components/_ProductItem.scss */
 .ProductItem {
@@ -333,6 +339,7 @@ a:hover {
 /* line 10, _src/sass/components/_Btn.scss */
 .Btn.red {
   background-color: #ed1c23;
+  color: #fff;
 }
 @media (min-width: 920px) {
   /* line 1, _src/sass/components/_Btn.scss */
