@@ -5,6 +5,17 @@
 /**
 * 絶対位置で配置する
 */
+/* line 1, _src/sass/components/_Contents.scss */
+.Contents {
+  position: relative;
+}
+@media (min-width: 920px) {
+  /* line 1, _src/sass/components/_Contents.scss */
+  .Contents {
+    padding-top: 64px;
+  }
+}
+
 /* line 1, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader {
   position: fixed;
