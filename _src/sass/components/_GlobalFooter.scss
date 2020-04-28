@@ -16,13 +16,30 @@
   }
 
   &__links {
+    display: flex;
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      align-items: center;
+    }
+
     li {
       & + {
         margin-left: 32px;
+      }
+
+      a {
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
 
   &__copyright {
+    @include font-en-bold;
   }
 }

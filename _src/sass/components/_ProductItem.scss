@@ -3,6 +3,12 @@
   display: flex;
   flex-direction: column;
 
+  @include sp-layout {
+  }
+
+  @include pc-layout {
+  }
+
   &__img {
     background-repeat: no-repeat;
     background-size: cover;

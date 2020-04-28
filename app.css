@@ -197,7 +197,7 @@ a:hover {
   justify-content: space-between;
   width: 100%;
   height: 64px;
-  padding: 12px;
+  padding: 0 12px;
   background-color: #fff;
 }
 /* line 18, _src/sass/components/_GlobalHeader.scss */
@@ -228,9 +228,32 @@ a:hover {
     font-size: 1.2rem;
   }
 }
-/* line 20, _src/sass/components/_GlobalFooter.scss */
+/* line 18, _src/sass/components/_GlobalFooter.scss */
+.GlobalFooter__links {
+  display: flex;
+}
+@media (min-width: 920px) {
+  /* line 18, _src/sass/components/_GlobalFooter.scss */
+  .GlobalFooter__links {
+    align-items: center;
+  }
+}
+/* line 28, _src/sass/components/_GlobalFooter.scss */
 .GlobalFooter__links li + {
   margin-left: 32px;
+}
+/* line 32, _src/sass/components/_GlobalFooter.scss */
+.GlobalFooter__links li a {
+  color: #fff;
+}
+/* line 35, _src/sass/components/_GlobalFooter.scss */
+.GlobalFooter__links li a:hover {
+  color: #fff;
+}
+/* line 42, _src/sass/components/_GlobalFooter.scss */
+.GlobalFooter__copyright {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 /* line 1, _src/sass/components/_SectionMain.scss */
@@ -259,39 +282,39 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-/* line 6, _src/sass/components/_ProductItem.scss */
+/* line 12, _src/sass/components/_ProductItem.scss */
 .ProductItem__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 17, _src/sass/components/_ProductItem.scss */
+/* line 23, _src/sass/components/_ProductItem.scss */
 .ProductItem__img:before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-/* line 24, _src/sass/components/_ProductItem.scss */
+/* line 30, _src/sass/components/_ProductItem.scss */
 .ProductItem__info {
   display: flex;
   flex-direction: column;
 }
-/* line 29, _src/sass/components/_ProductItem.scss */
+/* line 35, _src/sass/components/_ProductItem.scss */
 .ProductItem__main {
   display: flex;
   flex-direction: column;
 }
-/* line 34, _src/sass/components/_ProductItem.scss */
+/* line 40, _src/sass/components/_ProductItem.scss */
 .ProductItem__name {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 38, _src/sass/components/_ProductItem.scss */
+/* line 44, _src/sass/components/_ProductItem.scss */
 .ProductItem__copy {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 42, _src/sass/components/_ProductItem.scss */
+/* line 48, _src/sass/components/_ProductItem.scss */
 .ProductItem__price {
   font-size: 14px;
   font-size: 1.4rem;
