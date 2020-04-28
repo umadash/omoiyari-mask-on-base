@@ -15,5 +15,15 @@
   }
 
   &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        & + {
+          margin-left: 32px;
+        }
+      }
+    }
   }
 }

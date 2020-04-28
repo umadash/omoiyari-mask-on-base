@@ -19,6 +19,15 @@
   padding: 12px;
   background-color: #fff;
 }
+/* line 18, _src/sass/components/_GlobalHeader.scss */
+.GlobalHeader__nav ul {
+  display: flex;
+  align-items: center;
+}
+/* line 23, _src/sass/components/_GlobalHeader.scss */
+.GlobalHeader__nav ul li + {
+  margin-left: 32px;
+}
 
 /* line 1, _src/sass/components/_ProductItem.scss */
 .ProductItem {
