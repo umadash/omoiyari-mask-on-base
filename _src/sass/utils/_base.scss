@@ -1,0 +1,37 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  // ベースとなる文字の大きさ(rem)
+  @include font-size(16);
+
+  // 文字サイズの自動調整を無効にする
+  text-size-adjust: 100%;
+
+  // アンチエイリアス
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: "Noto Sans JP", "Avenir Next", "Maven Pro", "メイリオ", "Hiragino Kaku Gothic Pro", Meiryo, "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", sans-serif;
+  font-feature-settings: "palt";
+  @include font-regular;
+
+  background-color: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.marginTop16 {
+  margin-top: 16px;
+}
+
+.alm-load-more-btn {
+}
