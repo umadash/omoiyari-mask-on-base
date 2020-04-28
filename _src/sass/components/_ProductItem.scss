@@ -4,14 +4,29 @@
   flex-direction: column;
 
   &__img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     @include sp-layout {
     }
 
     @include pc-layout {
     }
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main {
     display: flex;
     flex-direction: column;
   }
