@@ -172,6 +172,7 @@ a {
 /* line 26, _src/sass/utils/_base.scss */
 a:hover {
   color: #000;
+  text-decoration: underline;
 }
 
 /* line 1, _src/sass/components/_Contents.scss */
@@ -283,44 +284,57 @@ a:hover {
 }
 
 /* line 1, _src/sass/components/_ProductItem.scss */
+.ProductItemList {
+  display: grid;
+}
+/* line 4, _src/sass/components/_ProductItem.scss */
+.ProductItemList .col1 {
+  grid-template-columns: 1fr;
+}
+/* line 8, _src/sass/components/_ProductItem.scss */
+.ProductItemList .col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* line 13, _src/sass/components/_ProductItem.scss */
 .ProductItem {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-/* line 12, _src/sass/components/_ProductItem.scss */
+/* line 24, _src/sass/components/_ProductItem.scss */
 .ProductItem__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 23, _src/sass/components/_ProductItem.scss */
+/* line 35, _src/sass/components/_ProductItem.scss */
 .ProductItem__img:before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-/* line 30, _src/sass/components/_ProductItem.scss */
+/* line 42, _src/sass/components/_ProductItem.scss */
 .ProductItem__info {
   display: flex;
   flex-direction: column;
 }
-/* line 35, _src/sass/components/_ProductItem.scss */
+/* line 47, _src/sass/components/_ProductItem.scss */
 .ProductItem__main {
   display: flex;
   flex-direction: column;
 }
-/* line 40, _src/sass/components/_ProductItem.scss */
+/* line 52, _src/sass/components/_ProductItem.scss */
 .ProductItem__name {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 44, _src/sass/components/_ProductItem.scss */
+/* line 56, _src/sass/components/_ProductItem.scss */
 .ProductItem__copy {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 48, _src/sass/components/_ProductItem.scss */
+/* line 60, _src/sass/components/_ProductItem.scss */
 .ProductItem__price {
   font-size: 14px;
   font-size: 1.4rem;

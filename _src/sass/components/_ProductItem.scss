@@ -1,3 +1,15 @@
+.ProductItemList {
+  display: grid;
+
+  .col1 {
+    grid-template-columns: 1fr;
+  }
+
+  .col3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .ProductItem {
   position: relative;
   display: flex;
