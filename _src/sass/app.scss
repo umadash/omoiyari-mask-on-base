@@ -1,10 +1,11 @@
 @import "./utils/variable";
 @import "./utils/mixin";
+@import "./utils/base";
 
 @import "./components/Contents";
 @import "./components/GlobalHeader";
 @import "./components/GlobalFooter";
 @import "./components/SectionMain";
-@import "./components/ProductItem";
 
-//
+@import "./components/ProductItem";
+@import "./components/Btn";

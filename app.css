@@ -5,6 +5,33 @@
 /**
 * 絶対位置で配置する
 */
+/* line 1, _src/sass/utils/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 5, _src/sass/utils/_base.scss */
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-feature-settings: "palt";
+  background-color: #fff;
+}
+
+/* line 22, _src/sass/utils/_base.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+/* line 26, _src/sass/utils/_base.scss */
+a:hover {
+  color: #000;
+}
+
 /* line 1, _src/sass/components/_Contents.scss */
 .Contents {
   position: relative;
@@ -126,4 +153,26 @@
 .ProductItem__price {
   font-size: 14px;
   font-size: 1.4rem;
+}
+
+/* line 1, _src/sass/components/_Btn.scss */
+.Btn {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+}
+/* line 6, _src/sass/components/_Btn.scss */
+.Btn.round {
+  border-radius: 9999px;
+}
+/* line 10, _src/sass/components/_Btn.scss */
+.Btn.red {
+  background-color: #ed1c23;
+}
+@media (min-width: 920px) {
+  /* line 1, _src/sass/components/_Btn.scss */
+  .Btn {
+    height: 54px;
+    line-height: 54px;
+  }
 }

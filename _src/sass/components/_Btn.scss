@@ -1,0 +1,22 @@
+.Btn {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+
+  &.round {
+    border-radius: 9999px;
+  }
+
+  &.red {
+    background-color: $color-red;
+  }
+
+  @include sp-layout {
+  }
+
+  @include pc-layout {
+    height: 54px;
+    line-height: 54px;
+    padding: 0 16px;
+  }
+}
