@@ -1,16 +1,30 @@
 .ProductItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   &__img {
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+    }
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
   }
 
   &__name {
+    @include font-size(16);
   }
 
   &__copy {
+    @include font-size(12);
   }
 
   &__price {
+    @include font-size(14);
   }
 }
