@@ -8,6 +8,7 @@
 /* line 1, _src/sass/components/_Contents.scss */
 .Contents {
   position: relative;
+  min-height: 100vh;
 }
 @media (min-width: 920px) {
   /* line 1, _src/sass/components/_Contents.scss */
@@ -37,6 +38,29 @@
 }
 /* line 23, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul li + {
+  margin-left: 32px;
+}
+
+/* line 1, _src/sass/components/_GlobalFooter.scss */
+.GlobalFooter {
+  position: relative;
+  background-color: #000;
+  color: #ffd400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+@media (min-width: 920px) {
+  /* line 1, _src/sass/components/_GlobalFooter.scss */
+  .GlobalFooter {
+    height: 60px;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+/* line 20, _src/sass/components/_GlobalFooter.scss */
+.GlobalFooter__links li + {
   margin-left: 32px;
 }
 

@@ -1,0 +1,28 @@
+.GlobalFooter {
+  position: relative;
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+
+  @include sp-layout {
+  }
+
+  @include pc-layout {
+    height: 60px;
+    @include font-size(12);
+  }
+
+  &__links {
+    li {
+      & + {
+        margin-left: 32px;
+      }
+    }
+  }
+
+  &__copyright {
+  }
+}
