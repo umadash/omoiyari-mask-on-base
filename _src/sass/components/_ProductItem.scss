@@ -3,6 +3,12 @@
 
   .col1 {
     grid-template-columns: 1fr;
+
+    > * {
+      @include pc-layout {
+        max-width: 640px;
+      }
+    }
   }
 
   .col3 {
