@@ -1,0 +1,11 @@
+.only-pc {
+    @include sp-layout {
+        display: none !important;
+    }
+}
+
+.only-sp {
+    @include pc-layout {
+        display: none !important;
+    }
+}

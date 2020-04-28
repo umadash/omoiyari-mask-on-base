@@ -1,0 +1,59 @@
+@mixin x-pc-layout {
+  @media (min-width: 1300px - 1) {
+    @content;
+  }
+}
+
+@mixin pc-layout {
+  @media (min-width: $pc_min_width) {
+    @content;
+  }
+}
+
+@mixin sp-layout {
+  @media (max-width: ($pc_min_width - 1)) {
+    @content;
+  }
+}
+
+@mixin ex-sp-layout {
+  @media screen and (max-width: #{375px - 1}) {
+    @content;
+  }
+}
+
+@mixin insert-bg($src, $width, $height, $dpr: 1) {
+  $w: round($width / $dpr);
+  $h: round($height / $dpr);
+  width: $w;
+  height: $h;
+  background-size: $w $h;
+  background-image: url(#{$src});
+  background-repeat: no-repeat;
+}
+
+/**
+* remに対応していないブラウザ用
+*/
+@mixin font-size($size, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}
+
+/**
+* 絶対位置で配置する
+*/
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// * hack IE
+@mixin for-ie11 {
+  @media all and (-ms-high-contrast: none\0) {
+    @content;
+  }
+}
