@@ -23,7 +23,7 @@
     @include font-size(16);
   }
 
-  &__main + &__selects {
+  form + &__selects {
     @include sp-layout {
     }
 

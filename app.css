@@ -493,19 +493,23 @@ a:hover {
   font-weight: 700;
 }
 /* line 7, _src/sass/components/_Btn.scss */
+.Btn[type="submit"] {
+  border: none;
+}
+/* line 11, _src/sass/components/_Btn.scss */
 .Btn:hover {
   text-decoration: none;
 }
-/* line 11, _src/sass/components/_Btn.scss */
+/* line 15, _src/sass/components/_Btn.scss */
 .Btn.round {
   border-radius: 9999px;
 }
-/* line 15, _src/sass/components/_Btn.scss */
+/* line 19, _src/sass/components/_Btn.scss */
 .Btn.red {
   background-color: #ed1c23;
   color: #fff;
 }
-/* line 20, _src/sass/components/_Btn.scss */
+/* line 24, _src/sass/components/_Btn.scss */
 .Btn:hover {
   text-decoration: none;
 }
@@ -565,7 +569,7 @@ a:hover {
 }
 @media (min-width: 920px) {
   /* line 26, _src/sass/components/_ProductInfo.scss */
-  .ProductInfo__main + .ProductInfo__selects {
+  form + .ProductInfo__selects {
     margin-top: 24px;
   }
 }
