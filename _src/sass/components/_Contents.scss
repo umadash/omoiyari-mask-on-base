@@ -20,4 +20,10 @@
   @include pc-layout {
     gap: 120px;
   }
+
+  > section {
+    &:last-child {
+      padding-bottom: 112px;
+    }
+  }
 }

@@ -203,6 +203,10 @@ a:hover {
     gap: 120px;
   }
 }
+/* line 25, _src/sass/components/_Contents.scss */
+.SectionWrapper > section:last-child {
+  padding-bottom: 112px;
+}
 
 /* line 1, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader {
