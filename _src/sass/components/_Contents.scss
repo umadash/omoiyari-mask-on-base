@@ -7,7 +7,7 @@
   }
 
   @include pc-layout {
-    padding-top: calc(80px + $header-height);
+    padding-top: calc(80px + #{$header-height});
   }
 }
 

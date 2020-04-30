@@ -183,7 +183,7 @@ a:hover {
 @media (min-width: 920px) {
   /* line 1, _src/sass/components/_Contents.scss */
   .Contents {
-    padding-top: calc(80px + $header-height);
+    padding-top: calc(80px + 64px);
   }
 }
 
@@ -340,21 +340,24 @@ a:hover {
 }
 
 @media (min-width: 920px) {
-  /* line 5, _src/sass/components/_SectionProduct.scss */
+  /* line 1, _src/sass/components/_SectionProduct.scss */
+  .SectionProduct {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+@media (min-width: 920px) {
+  /* line 12, _src/sass/components/_SectionProduct.scss */
   .SectionProduct__img + .SectionProduct__meta {
     margin-top: 64px;
   }
 }
-/* line 14, _src/sass/components/_SectionProduct.scss */
+/* line 21, _src/sass/components/_SectionProduct.scss */
 .SectionProduct__meta {
   display: flex;
   align-items: flex-start;
 }
-/* line 19, _src/sass/components/_SectionProduct.scss */
-.SectionProduct__info {
-  flex: 0 1;
-}
-/* line 23, _src/sass/components/_SectionProduct.scss */
+/* line 29, _src/sass/components/_SectionProduct.scss */
 .SectionProduct__content {
   flex: 1;
 }

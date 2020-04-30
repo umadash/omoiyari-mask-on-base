@@ -1,4 +1,11 @@
 .SectionProduct {
+  @include sp-layout {
+  }
+
+  @include pc-layout {
+    max-width: 1024px;
+    width: 100%;
+  }
   &__img {
   }
 
@@ -17,7 +24,6 @@
   }
 
   &__info {
-    flex: 0 1;
   }
 
   &__content {
