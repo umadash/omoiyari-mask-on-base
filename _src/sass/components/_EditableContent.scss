@@ -1,4 +1,5 @@
 .EditableContent {
+  @include font-bold;
   line-height: 2;
   letter-spacing: 2px;
 

@@ -390,10 +390,11 @@ a:hover {
 
 /* line 1, _src/sass/components/_EditableContent.scss */
 .EditableContent {
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 2px;
 }
-/* line 5, _src/sass/components/_EditableContent.scss */
+/* line 6, _src/sass/components/_EditableContent.scss */
 .EditableContent * + p {
   margin-top: 1.5em;
 }
