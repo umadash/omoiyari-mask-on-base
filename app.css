@@ -281,6 +281,10 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
+/* line 7, _src/sass/components/_SectionBasic.scss */
+.SectionBasic.gray {
+  background-color: #f4f4f4;
+}
 @media (max-width: 919px) {
   /* line 1, _src/sass/components/_SectionBasic.scss */
   .SectionBasic {
@@ -294,13 +298,13 @@ a:hover {
   }
 }
 @media (max-width: 919px) {
-  /* line 15, _src/sass/components/_SectionBasic.scss */
+  /* line 19, _src/sass/components/_SectionBasic.scss */
   .SectionTitle + .SectionBasic__content {
     margin-top: 20px;
   }
 }
 @media (min-width: 920px) {
-  /* line 15, _src/sass/components/_SectionBasic.scss */
+  /* line 19, _src/sass/components/_SectionBasic.scss */
   .SectionTitle + .SectionBasic__content {
     margin-top: 24px;
   }
@@ -348,30 +352,43 @@ a:hover {
     gap: 80px;
   }
 }
-/* line 15, _src/sass/components/_ProductItem.scss */
+/* line 13, _src/sass/components/_ProductItem.scss */
 .ProductItemList.col3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* line 20, _src/sass/components/_ProductItem.scss */
+/* line 18, _src/sass/components/_ProductItem.scss */
 .ProductItem {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-/* line 31, _src/sass/components/_ProductItem.scss */
+/* line 24, _src/sass/components/_ProductItem.scss */
+.ProductItem a:hover {
+  text-decoration: none;
+}
+/* line 29, _src/sass/components/_ProductItem.scss */
 .ProductItem__img {
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 42, _src/sass/components/_ProductItem.scss */
+/* line 35, _src/sass/components/_ProductItem.scss */
 .ProductItem__img:before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-/* line 49, _src/sass/components/_ProductItem.scss */
+/* line 41, _src/sass/components/_ProductItem.scss */
+.ProductItem__img a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 50, _src/sass/components/_ProductItem.scss */
 .ProductItem__info {
   display: flex;
   flex-direction: column;
@@ -379,28 +396,28 @@ a:hover {
   font-weight: 700;
 }
 @media (min-width: 920px) {
-  /* line 49, _src/sass/components/_ProductItem.scss */
+  /* line 50, _src/sass/components/_ProductItem.scss */
   .ProductItem__info {
     margin-top: 8px;
   }
 }
-/* line 63, _src/sass/components/_ProductItem.scss */
+/* line 61, _src/sass/components/_ProductItem.scss */
 .ProductItem__main {
   display: flex;
   flex-direction: column;
 }
-/* line 68, _src/sass/components/_ProductItem.scss */
+/* line 66, _src/sass/components/_ProductItem.scss */
 .ProductItem__name {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 72, _src/sass/components/_ProductItem.scss */
+/* line 70, _src/sass/components/_ProductItem.scss */
 .ProductItem__copy {
   font-size: 12px;
   font-size: 1.2rem;
   color: #777;
 }
-/* line 77, _src/sass/components/_ProductItem.scss */
+/* line 75, _src/sass/components/_ProductItem.scss */
 .ProductItem__price {
   font-size: 14px;
   font-size: 1.4rem;

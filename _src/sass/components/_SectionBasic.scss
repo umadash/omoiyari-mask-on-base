@@ -5,7 +5,7 @@
   align-items: center;
 
   &.gray {
-    color: $color-bg-gray;
+    background-color: $color-bg-gray;
   }
 
   @include sp-layout {
