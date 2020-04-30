@@ -326,19 +326,14 @@ a:hover {
   text-align: center;
   color: #ed1c23;
 }
-/* line 12, _src/sass/components/_SectionMain.scss */
-.SectionMain__copy {
-  line-height: 2;
-  letter-spacing: 2px;
-}
 @media (min-width: 920px) {
   /* line 12, _src/sass/components/_SectionMain.scss */
-  .SectionMain__copy {
+  .SectionMain__content {
     margin-top: 56px;
   }
 }
 @media (min-width: 920px) {
-  /* line 24, _src/sass/components/_SectionMain.scss */
+  /* line 21, _src/sass/components/_SectionMain.scss */
   .SectionMain__btn {
     margin-top: 32px;
   }
@@ -370,8 +365,9 @@ a:hover {
 /* line 1, _src/sass/components/_EditableContent.scss */
 .EditableContent {
   line-height: 2;
+  letter-spacing: 2px;
 }
-/* line 4, _src/sass/components/_EditableContent.scss */
+/* line 5, _src/sass/components/_EditableContent.scss */
 .EditableContent * + p {
   margin-top: 1.5em;
 }

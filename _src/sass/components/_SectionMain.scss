@@ -9,10 +9,7 @@
   &__title {
   }
 
-  &__copy {
-    line-height: 2;
-    letter-spacing: 2px;
-
+  &__content {
     @include sp-layout {
     }
 
