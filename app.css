@@ -191,22 +191,6 @@ a:hover {
 .SectionWrapper {
   display: grid;
 }
-@media (max-width: 919px) {
-  /* line 14, _src/sass/components/_Contents.scss */
-  .SectionWrapper {
-    gap: 80px;
-  }
-}
-@media (min-width: 920px) {
-  /* line 14, _src/sass/components/_Contents.scss */
-  .SectionWrapper {
-    gap: 120px;
-  }
-}
-/* line 25, _src/sass/components/_Contents.scss */
-.SectionWrapper > section:last-child {
-  padding-bottom: 112px;
-}
 
 /* line 1, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader {
@@ -331,13 +315,21 @@ a:hover {
   color: #ed1c23;
 }
 @media (min-width: 920px) {
-  /* line 12, _src/sass/components/_SectionMain.scss */
+  /* line 1, _src/sass/components/_SectionMain.scss */
+  .SectionMain {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 112px;
+  }
+}
+@media (min-width: 920px) {
+  /* line 21, _src/sass/components/_SectionMain.scss */
   .SectionMain__content {
     margin-top: 56px;
   }
 }
 @media (min-width: 920px) {
-  /* line 21, _src/sass/components/_SectionMain.scss */
+  /* line 30, _src/sass/components/_SectionMain.scss */
   .SectionMain__btn {
     margin-top: 32px;
   }

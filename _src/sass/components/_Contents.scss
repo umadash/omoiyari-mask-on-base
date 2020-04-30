@@ -14,16 +14,8 @@
 .SectionWrapper {
   display: grid;
   @include sp-layout {
-    gap: 80px;
   }
 
   @include pc-layout {
-    gap: 120px;
-  }
-
-  > section {
-    &:last-child {
-      padding-bottom: 112px;
-    }
   }
 }
