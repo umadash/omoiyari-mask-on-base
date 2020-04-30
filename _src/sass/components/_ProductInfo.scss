@@ -3,10 +3,20 @@
     display: flex;
     flex-direction: column;
     @include font-bold;
+    line-height: 1.5;
   }
 
   &__name {
     @include font-size(24);
+  }
+
+  &__name + &__price {
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 8px;
+    }
   }
 
   &__price {
@@ -42,6 +52,7 @@
   }
 
   &__note {
+    line-height: 2;
     color: $color-text-gray;
     @include font-size(12);
   }
