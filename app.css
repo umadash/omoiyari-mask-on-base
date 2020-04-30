@@ -212,7 +212,6 @@ a:hover {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 64px;
   padding: 0 12px;
@@ -220,12 +219,18 @@ a:hover {
   z-index: 999;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
-/* line 20, _src/sass/components/_GlobalHeader.scss */
+@media (min-width: 920px) {
+  /* line 18, _src/sass/components/_GlobalHeader.scss */
+  .GlobalHeader__logo + .GlobalHeader__nav {
+    margin-left: 32px;
+  }
+}
+/* line 28, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul {
   display: flex;
   align-items: center;
 }
-/* line 25, _src/sass/components/_GlobalHeader.scss */
+/* line 33, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul li + {
   margin-left: 32px;
 }
