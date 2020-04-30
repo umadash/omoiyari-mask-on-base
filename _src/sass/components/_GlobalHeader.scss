@@ -30,7 +30,7 @@
       align-items: center;
 
       li {
-        & + {
+        & + * {
           margin-left: 32px;
         }
       }

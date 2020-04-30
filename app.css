@@ -231,7 +231,7 @@ a:hover {
   align-items: center;
 }
 /* line 33, _src/sass/components/_GlobalHeader.scss */
-.GlobalHeader__nav ul li + {
+.GlobalHeader__nav ul li + * {
   margin-left: 32px;
 }
 
@@ -264,7 +264,7 @@ a:hover {
   }
 }
 /* line 28, _src/sass/components/_GlobalFooter.scss */
-.GlobalFooter__links li + {
+.GlobalFooter__links li + * {
   margin-left: 32px;
 }
 /* line 32, _src/sass/components/_GlobalFooter.scss */
