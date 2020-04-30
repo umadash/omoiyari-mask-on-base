@@ -13,10 +13,10 @@
 .SectionWrapper {
   display: grid;
   @include sp-layout {
-    gap: 120px;
+    gap: 80px;
   }
 
   @include pc-layout {
-    gap: 160px;
+    gap: 120px;
   }
 }

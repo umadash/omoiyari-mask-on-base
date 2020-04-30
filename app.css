@@ -194,13 +194,13 @@ a:hover {
 @media (max-width: 919px) {
   /* line 13, _src/sass/components/_Contents.scss */
   .SectionWrapper {
-    gap: 120px;
+    gap: 80px;
   }
 }
 @media (min-width: 920px) {
   /* line 13, _src/sass/components/_Contents.scss */
   .SectionWrapper {
-    gap: 160px;
+    gap: 120px;
   }
 }
 
