@@ -28,5 +28,11 @@
 
   &__content {
     flex: 1;
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      padding-left: 32px;
+    }
   }
 }

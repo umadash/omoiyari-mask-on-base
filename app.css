@@ -183,7 +183,7 @@ a:hover {
 @media (min-width: 920px) {
   /* line 1, _src/sass/components/_Contents.scss */
   .Contents {
-    padding-top: calc(80px + 64px);
+    padding-top: calc(80px + 56px);
   }
 }
 
@@ -201,8 +201,8 @@ a:hover {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 64px;
-  padding: 0 12px;
+  height: 56px;
+  padding: 0 24px;
   background-color: #fff;
   z-index: 999;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -213,12 +213,16 @@ a:hover {
     margin-left: 32px;
   }
 }
-/* line 28, _src/sass/components/_GlobalHeader.scss */
+/* line 27, _src/sass/components/_GlobalHeader.scss */
+.GlobalHeader__nav {
+  font-weight: 700;
+}
+/* line 30, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul {
   display: flex;
   align-items: center;
 }
-/* line 33, _src/sass/components/_GlobalHeader.scss */
+/* line 35, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul li + * {
   margin-left: 32px;
 }
@@ -357,6 +361,12 @@ a:hover {
 .SectionProduct__content {
   flex: 1;
 }
+@media (min-width: 920px) {
+  /* line 29, _src/sass/components/_SectionProduct.scss */
+  .SectionProduct__content {
+    padding-left: 32px;
+  }
+}
 
 /* line 1, _src/sass/components/_EditableContent.scss */
 .EditableContent {
@@ -484,7 +494,7 @@ a:hover {
   .Btn {
     height: 54px;
     line-height: 54px;
-    padding: 0 16px;
+    padding: 0 32px;
   }
 }
 
