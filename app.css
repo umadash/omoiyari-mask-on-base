@@ -159,7 +159,7 @@ body {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
   font-feature-settings: "palt";
   background-color: #fff;
 }
@@ -184,6 +184,23 @@ a:hover {
   /* line 1, _src/sass/components/_Contents.scss */
   .Contents {
     padding-top: 64px;
+  }
+}
+
+/* line 13, _src/sass/components/_Contents.scss */
+.SectionWrapper {
+  display: grid;
+}
+@media (max-width: 919px) {
+  /* line 13, _src/sass/components/_Contents.scss */
+  .SectionWrapper {
+    gap: 120px;
+  }
+}
+@media (min-width: 920px) {
+  /* line 13, _src/sass/components/_Contents.scss */
+  .SectionWrapper {
+    gap: 160px;
   }
 }
 
@@ -257,6 +274,26 @@ a:hover {
   font-weight: 700;
 }
 
+/* line 1, _src/sass/components/_SectionBasic.scss */
+.SectionBasic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 919px) {
+  /* line 7, _src/sass/components/_SectionBasic.scss */
+  .SectionTitle + .SectionBasic__content {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 920px) {
+  /* line 7, _src/sass/components/_SectionBasic.scss */
+  .SectionTitle + .SectionBasic__content {
+    margin-top: 24px;
+  }
+}
+
 /* line 1, _src/sass/components/_SectionMain.scss */
 .SectionMain {
   position: relative;
@@ -269,6 +306,7 @@ a:hover {
 /* line 12, _src/sass/components/_SectionMain.scss */
 .SectionMain__copy {
   line-height: 2;
+  letter-spacing: 2px;
 }
 @media (min-width: 920px) {
   /* line 12, _src/sass/components/_SectionMain.scss */
@@ -277,7 +315,7 @@ a:hover {
   }
 }
 @media (min-width: 920px) {
-  /* line 23, _src/sass/components/_SectionMain.scss */
+  /* line 24, _src/sass/components/_SectionMain.scss */
   .SectionMain__btn {
     margin-top: 32px;
   }
@@ -294,66 +332,61 @@ a:hover {
 @media (min-width: 920px) {
   /* line 4, _src/sass/components/_ProductItem.scss */
   .ProductItemList.col1 {
+    max-width: 640px;
     gap: 80px;
   }
 }
-@media (min-width: 920px) {
-  /* line 13, _src/sass/components/_ProductItem.scss */
-  .ProductItemList.col1 > * {
-    max-width: 640px;
-  }
-}
-/* line 20, _src/sass/components/_ProductItem.scss */
+/* line 15, _src/sass/components/_ProductItem.scss */
 .ProductItemList.col3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* line 25, _src/sass/components/_ProductItem.scss */
+/* line 20, _src/sass/components/_ProductItem.scss */
 .ProductItem {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-/* line 36, _src/sass/components/_ProductItem.scss */
+/* line 31, _src/sass/components/_ProductItem.scss */
 .ProductItem__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 47, _src/sass/components/_ProductItem.scss */
+/* line 42, _src/sass/components/_ProductItem.scss */
 .ProductItem__img:before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-/* line 54, _src/sass/components/_ProductItem.scss */
+/* line 49, _src/sass/components/_ProductItem.scss */
 .ProductItem__info {
   display: flex;
   flex-direction: column;
   line-height: 1.666;
 }
 @media (min-width: 920px) {
-  /* line 54, _src/sass/components/_ProductItem.scss */
+  /* line 49, _src/sass/components/_ProductItem.scss */
   .ProductItem__info {
     margin-top: 8px;
   }
 }
-/* line 67, _src/sass/components/_ProductItem.scss */
+/* line 62, _src/sass/components/_ProductItem.scss */
 .ProductItem__main {
   display: flex;
   flex-direction: column;
 }
-/* line 72, _src/sass/components/_ProductItem.scss */
+/* line 67, _src/sass/components/_ProductItem.scss */
 .ProductItem__name {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 76, _src/sass/components/_ProductItem.scss */
+/* line 71, _src/sass/components/_ProductItem.scss */
 .ProductItem__copy {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 80, _src/sass/components/_ProductItem.scss */
+/* line 75, _src/sass/components/_ProductItem.scss */
 .ProductItem__price {
   font-size: 14px;
   font-size: 1.4rem;
@@ -365,12 +398,17 @@ a:hover {
   display: inline-block;
   white-space: nowrap;
   text-align: center;
+  font-weight: 700;
 }
-/* line 6, _src/sass/components/_Btn.scss */
+/* line 7, _src/sass/components/_Btn.scss */
+.Btn:hover {
+  text-decoration: none;
+}
+/* line 11, _src/sass/components/_Btn.scss */
 .Btn.round {
   border-radius: 9999px;
 }
-/* line 10, _src/sass/components/_Btn.scss */
+/* line 15, _src/sass/components/_Btn.scss */
 .Btn.red {
   background-color: #ed1c23;
   color: #fff;
@@ -389,14 +427,15 @@ a:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-/* line 6, _src/sass/components/_SectionTitle.scss */
-.SectionTitle__jp {
-  font-size: 20px;
-  font-size: 2rem;
   line-height: 1.333;
 }
-/* line 11, _src/sass/components/_SectionTitle.scss */
+/* line 7, _src/sass/components/_SectionTitle.scss */
+.SectionTitle__jp {
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 2rem;
+}
+/* line 12, _src/sass/components/_SectionTitle.scss */
 .SectionTitle__en {
   font-size: 12px;
   font-size: 1.2rem;

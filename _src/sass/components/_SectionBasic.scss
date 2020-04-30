@@ -1,0 +1,16 @@
+.SectionBasic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .SectionTitle + &__content {
+    @include sp-layout {
+      margin-top: 20px;
+    }
+
+    @include pc-layout {
+      margin-top: 24px;
+    }
+  }
+}

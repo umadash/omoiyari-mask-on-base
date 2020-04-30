@@ -1,3 +1,7 @@
+@mixin font-bold {
+  font-weight: 700;
+}
+
 @mixin font-en-bold {
   font-family: "Roboto", sans-serif;
   font-weight: 700;

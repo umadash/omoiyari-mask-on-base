@@ -9,3 +9,14 @@
     padding-top: 64px;
   }
 }
+
+.SectionWrapper {
+  display: grid;
+  @include sp-layout {
+    gap: 120px;
+  }
+
+  @include pc-layout {
+    gap: 160px;
+  }
+}

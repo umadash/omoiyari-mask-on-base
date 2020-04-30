@@ -7,13 +7,8 @@
     }
 
     @include pc-layout {
+      max-width: 640px;
       gap: 80px;
-    }
-
-    > * {
-      @include pc-layout {
-        max-width: 640px;
-      }
     }
   }
 

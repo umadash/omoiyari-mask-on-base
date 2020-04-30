@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  line-height: 1.333;
 
   &__jp {
+    @include font-bold;
     @include font-size(20);
-    line-height: 1.333;
   }
 
   &__en {
