@@ -207,22 +207,42 @@ a:hover {
   z-index: 999;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 919px) {
+  /* line 15, _src/sass/components/_GlobalHeader.scss */
+  .GlobalHeader__logo {
+    width: 54px;
+    height: 35px;
+  }
+}
 @media (min-width: 920px) {
-  /* line 18, _src/sass/components/_GlobalHeader.scss */
+  /* line 15, _src/sass/components/_GlobalHeader.scss */
+  .GlobalHeader__logo {
+    width: 54px;
+    height: 35px;
+  }
+}
+/* line 26, _src/sass/components/_GlobalHeader.scss */
+.GlobalHeader__logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 920px) {
+  /* line 33, _src/sass/components/_GlobalHeader.scss */
   .GlobalHeader__logo + .GlobalHeader__nav {
     margin-left: 32px;
   }
 }
-/* line 27, _src/sass/components/_GlobalHeader.scss */
+/* line 42, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav {
   font-weight: 700;
 }
-/* line 30, _src/sass/components/_GlobalHeader.scss */
+/* line 45, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul {
   display: flex;
   align-items: center;
 }
-/* line 35, _src/sass/components/_GlobalHeader.scss */
+/* line 50, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul li + * {
   margin-left: 32px;
 }
