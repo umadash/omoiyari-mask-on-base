@@ -217,13 +217,15 @@ a:hover {
   height: 64px;
   padding: 0 12px;
   background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
-/* line 18, _src/sass/components/_GlobalHeader.scss */
+/* line 20, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul {
   display: flex;
   align-items: center;
 }
-/* line 23, _src/sass/components/_GlobalHeader.scss */
+/* line 25, _src/sass/components/_GlobalHeader.scss */
 .GlobalHeader__nav ul li + {
   margin-left: 32px;
 }
@@ -335,6 +337,35 @@ a:hover {
   .SectionMain__btn {
     margin-top: 32px;
   }
+}
+
+@media (min-width: 920px) {
+  /* line 5, _src/sass/components/_SectionProduct.scss */
+  .SectionProduct__img + .SectionProduct__meta {
+    margin-top: 64px;
+  }
+}
+/* line 14, _src/sass/components/_SectionProduct.scss */
+.SectionProduct__meta {
+  display: flex;
+  align-items: flex-start;
+}
+/* line 19, _src/sass/components/_SectionProduct.scss */
+.SectionProduct__info {
+  flex: 0 1;
+}
+/* line 23, _src/sass/components/_SectionProduct.scss */
+.SectionProduct__content {
+  flex: 1;
+}
+
+/* line 1, _src/sass/components/_EditableContent.scss */
+.EditableContent {
+  line-height: 2;
+}
+/* line 4, _src/sass/components/_EditableContent.scss */
+.EditableContent * + p {
+  margin-top: 1.5em;
 }
 
 /* line 1, _src/sass/components/_ProductItem.scss */
@@ -477,4 +508,49 @@ a:hover {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: #ed1c23;
+}
+
+/* line 2, _src/sass/components/_ProductInfo.scss */
+.ProductInfo__main {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+/* line 8, _src/sass/components/_ProductInfo.scss */
+.ProductInfo__name {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+/* line 12, _src/sass/components/_ProductInfo.scss */
+.ProductInfo__price {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+@media (min-width: 920px) {
+  /* line 16, _src/sass/components/_ProductInfo.scss */
+  .ProductInfo__main + .ProductInfo__selects {
+    margin-top: 24px;
+  }
+}
+/* line 25, _src/sass/components/_ProductInfo.scss */
+.ProductInfo__selects {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 920px) {
+  /* line 30, _src/sass/components/_ProductInfo.scss */
+  .ProductInfo__selects + .ProductInfo__foot {
+    margin-top: 24px;
+  }
+}
+/* line 39, _src/sass/components/_ProductInfo.scss */
+.ProductInfo__foot {
+  display: flex;
+  flex-direction: column;
+}
+/* line 44, _src/sass/components/_ProductInfo.scss */
+.ProductInfo__note {
+  color: #777;
+  font-size: 12px;
+  font-size: 1.2rem;
 }

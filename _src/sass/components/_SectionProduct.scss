@@ -1,0 +1,26 @@
+.SectionProduct {
+  &__img {
+  }
+
+  &__img + &__meta {
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 64px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__info {
+    flex: 0 1;
+  }
+
+  &__content {
+    flex: 1;
+  }
+}

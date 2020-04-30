@@ -1,0 +1,7 @@
+.EditableContent {
+  line-height: 2;
+
+  * + p {
+    margin-top: 1.5em;
+  }
+}

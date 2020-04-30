@@ -1,0 +1,48 @@
+.ProductInfo {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    @include font-bold;
+  }
+
+  &__name {
+    @include font-size(24);
+  }
+
+  &__price {
+    @include font-size(16);
+  }
+
+  &__main + &__selects {
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 24px;
+    }
+  }
+
+  &__selects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__selects + &__foot {
+    @include sp-layout {
+    }
+
+    @include pc-layout {
+      margin-top: 24px;
+    }
+  }
+
+  &__foot {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__note {
+    color: $color-text-gray;
+    @include font-size(12);
+  }
+}
