@@ -13,10 +13,13 @@
 }
 
 .SectionWrapper {
-  display: grid;
   @include sp-layout {
   }
 
   @include pc-layout {
+  }
+
+  > section {
+    margin: 0 auto;
   }
 }
