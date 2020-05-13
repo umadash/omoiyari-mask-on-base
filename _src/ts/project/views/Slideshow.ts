@@ -23,7 +23,6 @@ export default class Slideshow {
         return !!value;
       });
     this.srcs = srcs;
-    console.log(srcs);
 
     // 画像の数だけ、サムネイルを生成する
     let thumbs = "";
@@ -36,10 +35,16 @@ export default class Slideshow {
     $(".BtnThumb").on("click", (e) => {
       const $target = $(e.target);
       const index = parseInt($target.attr("data-index"), 10);
-      const src = this.srcs[index];
-      this.$content.css({
-        backgroundImage: `url(${src})`,
-      });
+      this.changeAt(index);
+    });
+
+    this.changeAt(0);
+  }
+
+  private changeAt(index: number): void {
+    const src = this.srcs[index];
+    this.$content.css({
+      backgroundImage: `url(${src})`,
     });
   }
 }
