@@ -4,20 +4,23 @@
   color: $color-white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
 
   @include sp-layout {
+    flex-direction: column;
+    padding: 20px 16px 32px;
   }
 
   @include pc-layout {
+    justify-content: space-between;
     height: 60px;
     @include font-size(12);
+    padding: 0 16px;
   }
 
   &__links {
     display: flex;
     @include sp-layout {
+      flex-direction: column;
     }
 
     @include pc-layout {
@@ -26,7 +29,13 @@
 
     li {
       & + * {
-        margin-left: 32px;
+        @include sp-layout {
+          margin-top: 12px;
+        }
+
+        @include pc-layout {
+          margin-left: 32px;
+        }
       }
 
       a {
@@ -41,5 +50,9 @@
 
   &__copyright {
     @include font-en-bold;
+
+    @include sp-layout {
+      margin-top: 32px;
+    }
   }
 }

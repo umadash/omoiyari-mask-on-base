@@ -22,6 +22,7 @@
     justify-content: center;
 
     @include sp-layout {
+      margin-top: 24px;
     }
 
     @include pc-layout {
@@ -34,11 +35,6 @@
   }
 
   &__btn {
-    @include sp-layout {
-    }
-
-    @include pc-layout {
-      margin-top: 32px;
-    }
+    margin-top: 32px;
   }
 }
