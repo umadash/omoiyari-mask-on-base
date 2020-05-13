@@ -10,6 +10,12 @@
   }
 
   &__img {
+    width: 100%;
+    &:before {
+      content: "";
+      padding-top: 56.25%;
+      max-height: 640px;
+    }
   }
 
   &__img + &__meta {
