@@ -1,12 +1,12 @@
 .Slideshow {
-  background-color: #fefefe;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all linear 0.3s;
-
   &__content {
     width: 100%;
+    background-color: #fefefe;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all linear 0.3s;
+
     &:before {
       content: "";
       display: block;
@@ -16,5 +16,16 @@
   }
 
   &__thumbs {
+    > * {
+      & + * {
+        @include sp-layout {
+          margin-left: 12px;
+        }
+
+        @include pc-layout {
+          margin-left: 16px;
+        }
+      }
+    }
   }
 }
