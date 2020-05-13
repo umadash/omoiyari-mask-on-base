@@ -16,6 +16,8 @@
     height: $size;
   }
 
+  &:hover,
   &.current {
+    border: 4px solid $color-black;
   }
 }
