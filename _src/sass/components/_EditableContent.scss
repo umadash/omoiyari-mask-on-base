@@ -1,7 +1,13 @@
 .EditableContent {
-  @include font-bold;
   line-height: 2;
   letter-spacing: 2px;
+
+  &.concept {
+    @include font-bold;
+  }
+
+  &.exp {
+  }
 
   * + p {
     margin-top: 1.5em;
