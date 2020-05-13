@@ -57,4 +57,14 @@
     color: $color-text-gray;
     @include font-size(12);
   }
+
+  .itemAttention {
+    @include sp-layout {
+      margin-top: 16px;
+    }
+
+    @include pc-layout {
+      margin-top: 24px;
+    }
+  }
 }
