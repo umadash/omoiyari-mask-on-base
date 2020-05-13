@@ -15,6 +15,16 @@
     }
   }
 
+  &__content + &__thumbs {
+    @include sp-layout {
+      margin-top: 8px;
+    }
+
+    @include pc-layout {
+      margin-top: 12px;
+    }
+  }
+
   &__thumbs {
     @include sp-layout {
       padding: 0 8px;
