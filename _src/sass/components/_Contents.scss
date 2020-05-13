@@ -4,6 +4,7 @@
   min-height: 100vh;
 
   @include sp-layout {
+    padding-top: calc(80px + #{$header-height});
   }
 
   @include pc-layout {
