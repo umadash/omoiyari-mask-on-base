@@ -25,21 +25,16 @@
   }
 
   &__thumbs {
-    @include sp-layout {
-      padding: 0 8px;
-    }
+    display: flex;
+    flex-wrap: wrap;
 
-    @include pc-layout {
-    }
     > * {
-      & + * {
-        @include sp-layout {
-          margin-left: 8px;
-        }
+      @include sp-layout {
+        margin: 8px;
+      }
 
-        @include pc-layout {
-          margin-left: 12px;
-        }
+      @include pc-layout {
+        margin: 4px;
       }
     }
   }
