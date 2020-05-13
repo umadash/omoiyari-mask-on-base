@@ -2,14 +2,7 @@
   $header-height: 56px;
   position: relative;
   min-height: 100vh;
-
-  @include sp-layout {
-    padding-top: #{$header-height};
-  }
-
-  @include pc-layout {
-    padding-top: calc(80px + #{$header-height});
-  }
+  padding-top: #{$header-height};
 }
 
 .SectionWrapper {

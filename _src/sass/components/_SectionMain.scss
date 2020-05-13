@@ -7,7 +7,7 @@
   color: $color-red;
 
   @include sp-layout {
-    padding: 0 16px 80px;
+    padding: 56px 16px 80px;
   }
 
   @include pc-layout {
