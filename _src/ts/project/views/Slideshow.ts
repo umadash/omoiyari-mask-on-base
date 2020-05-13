@@ -31,21 +31,6 @@ export default class Slideshow {
     for (let i = 0; i < this.srcs.length; i++) {
       const src: string = this.srcs[i];
       thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
-      thumbs += `<button data-index="${i}" class="BtnThumb" style="background-image:url(${src})"></button>`;
     }
     this.$thumbs.html(thumbs);
 
