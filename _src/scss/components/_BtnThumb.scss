@@ -1,0 +1,20 @@
+.BtnThumb {
+  @include sp-layout {
+    $size: 40px;
+    width: $size;
+    height: $size;
+  }
+
+  @include pc-layout {
+    $size: 80px;
+    width: $size;
+    height: $size;
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &.current {
+  }
+}
