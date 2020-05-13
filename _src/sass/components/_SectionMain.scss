@@ -28,10 +28,6 @@
     @include pc-layout {
       margin-top: 56px;
     }
-
-    > * {
-      flex: 1;
-    }
   }
 
   &__btn {
