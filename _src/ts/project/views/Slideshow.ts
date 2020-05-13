@@ -18,8 +18,8 @@ export default class Slideshow {
     const srcs: string[] = this.$elm
       .attr("data-srcs")
       .split(",")
-      .filter(function (x, i, self) {
-        return self.indexOf(x) === i;
+      .filter((value: string) => {
+        return !!value;
       });
     console.log(srcs);
   }
