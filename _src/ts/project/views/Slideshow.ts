@@ -23,6 +23,7 @@ export default class Slideshow {
         return !!value;
       });
     this.srcs = srcs;
+    console.log(srcs);
 
     // 画像の数だけ、サムネイルを生成する
     let thumbs = "";
@@ -42,6 +43,7 @@ export default class Slideshow {
   }
 
   private changeAt(index: number): void {
+    console.log("changeAt");
     const src = this.srcs[index];
     this.$content.css({
       backgroundImage: `url(${src})`,
