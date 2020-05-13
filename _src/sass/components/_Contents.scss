@@ -10,6 +10,12 @@
   @include pc-layout {
     padding-top: calc(80px + #{$header-height});
   }
+
+  &.product {
+    @include sp-layout {
+      padding-top: calc(#{$header-height});
+    }
+  }
 }
 
 .SectionWrapper {
