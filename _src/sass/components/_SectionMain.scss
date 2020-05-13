@@ -18,11 +18,18 @@
   }
 
   &__content {
+    display: flex;
+    justify-content: center;
+
     @include sp-layout {
     }
 
     @include pc-layout {
       margin-top: 56px;
+    }
+
+    > * {
+      flex: 1;
     }
   }
 
