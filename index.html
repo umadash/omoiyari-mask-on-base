@@ -44,8 +44,9 @@
     <script src="{BASEURL}/js/change_status.js?{UpdateTime}"></script>
 
     <link rel="stylesheet" href="/css/shopTemplate/v2/common.css?{UpdateTime}" />
+    <link rel="stylesheet" href="https://umadash.github.io/omoiyari-mask-on-base/app.css" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{BASEURL}/css/shopTemplate/v3/shop_100.css?{UpdateTime}" />
 
     {BackgroundTag}
@@ -126,7 +127,25 @@
       <h1><a href="{IndexPageURL}" id="logo">{LogoTag}</a></h1>
     </header>
 
+    <header class="GlobalHeader">
+      <h1 class="GlobalHeader__logo"><a href="{IndexPageURL}" id="logo">{LogoTag}</a></h1>
+      <nav class="GlobalHeader__nav">
+        <ul>
+          <li><a class="mainHeaderNavColor" href="{IndexPageURL}">HOME</a></li>
+          <li><a class="mainHeaderNavColor" href="{AboutPageURL}">ABOUT</a></li>
+          <li><a class="mainHeaderNavColor" href="{ContactPageURL}">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="container">
+      <section class="SectionMain">
+        <h1 class="SectionMain__title">{LogoTag}</h1>
+        <p class="SectionMain__copy">思いやりマスクは、メイドインジャパン品質で ウイルスの主な感染源からパートナーと自分を守り、 繰り返し洗えるサスティナブルなマスクです。</p>
+      </section>
+
+      <section></section>
+
       <nav id="main_navigation">
         <ul class="row">
           <li class="column"><a class="mainHeaderNavColor" href="{IndexPageURL}">home</a></li>
@@ -169,6 +188,10 @@
       <h3 class="mainHeaderNavColor titleForSearchResult">{lang:ItemSearchResult}</h3>
       {/block:IndexPageSearch} {block:HasItems}
       <section id="products">
+        <div class="SectionTitle">
+          <h1 class="SectionTitle__jp">製品</h1>
+          <p class="SectionTitle__en">PRODUCTS</p>
+        </div>
         <ul class="product_list_wrap row">
           {block:Items}
           <li class="product_list">
@@ -665,6 +688,14 @@
       {block:BlogPage} {BlogContentsTag} {/block:BlogPage}
     </div>
 
+    <footer class="GlobalFooter">
+      <ul class="GlobalFooter__links">
+        <li><a class="footerNav" href="{PrivacyPageURL}">{lang:Privacy}</a></li>
+        <li><a class="footerNav" href="{LawPageURL}">{lang:Law}</a></li>
+      </ul>
+      <small class="GlobalFooter__copyright">Copyright &copy; The ZAC COMPANY All Rights Reserved.</small>
+    </footer>
+
     <footer id="mainFooter">
       <ul class="clearfix">
         <li><a class="footerNav" href="{PrivacyPageURL}">{lang:Privacy}</a></li>
@@ -699,6 +730,25 @@
   </body>
 </html>
 {/block:NotLoadItemsPage} {block:LoadItemsPage} {block:Items}
+<li class="product_list">
+  <article class="ProductItem">
+    <div class="ProductItem__img" style="background-image: url();"></div>
+    <div class="ProductItem__info">
+      <div class="ProductItem__main">
+        <h1 class="ProductItem__name">{ItemTitle}</h1>
+        <h2 class="ProductItem__copy">抗菌、防臭、速乾性に優れた和紙素材を使用。涼しく軽量で暑くなる季節に適したマスクです。</h2>
+      </div>
+
+      <div class="ProductItem__price">
+        {block:NoItemProperPrice}
+        <span>{ItemPrice}</span>
+        {/block:NoItemProperPrice} {block:ItemEndOfSale}
+        <span class="soldOutText">SOLD OUT</span>
+        {/block:ItemEndOfSale}
+      </div>
+    </div>
+  </article>
+</li>
 <li class="product_list">
   <a href="{ItemPageURL}">
     {block:AppsItemLabel} {AppsItemLabelTag} {/block:AppsItemLabel}

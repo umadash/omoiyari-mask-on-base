@@ -6,6 +6,16 @@
     line-height: 1.5;
   }
 
+  &__purchase {
+    @include sp-layout {
+      margin-top: 12px;
+    }
+
+    @include pc-layout {
+      margin-top: 16px;
+    }
+  }
+
   &__name {
     @include font-size(24);
   }
@@ -60,13 +70,23 @@
     @include font-size(12);
   }
 
-  .itemAttention {
+  #itemAttention {
     @include sp-layout {
       margin-top: 16px;
     }
 
     @include pc-layout {
       margin-top: 24px;
+    }
+  }
+
+  .descri + .shareButtons {
+    @include sp-layout {
+      margin-top: 8px;
+    }
+
+    @include pc-layout {
+      margin-top: 8px;
     }
   }
 }

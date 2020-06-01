@@ -25,16 +25,16 @@
   }
 
   &__thumbs {
-    display: flex;
-    flex-wrap: wrap;
-
     > * {
+      float: left;
       @include sp-layout {
-        margin: 4px;
+        margin-left: 4px;
+        margin-bottom: 4px;
       }
 
       @include pc-layout {
-        margin: 4px;
+        margin-right: 4px;
+        margin-bottom: 4px;
       }
     }
   }

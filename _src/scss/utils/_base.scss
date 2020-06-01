@@ -29,5 +29,10 @@ a {
   }
 }
 
-.alm-load-more-btn {
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }

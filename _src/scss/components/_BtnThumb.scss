@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: border 0.2s ease-out;
 
   @include sp-layout {
     $size: 40px;
