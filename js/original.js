@@ -129,8 +129,10 @@ var mask;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EntryIndex", function() { return EntryIndex; });
 /* harmony import */ var _project_views_Slideshow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../project/views/Slideshow */ "./_src/ts/project/views/Slideshow.ts");
+/* harmony import */ var _views_GlobalHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/GlobalHeader */ "./_src/ts/project/views/GlobalHeader.ts");
 var $ = jQuery;
 var _ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+
 
 var EntryIndex = /** @class */ (function () {
     function EntryIndex() {
@@ -138,6 +140,7 @@ var EntryIndex = /** @class */ (function () {
     }
     EntryIndex.prototype.run = function () {
         var _this = this;
+        this.header = new _views_GlobalHeader__WEBPACK_IMPORTED_MODULE_1__["default"]($("#GlobalHeader"));
         var $slideshows = $(".Slideshow");
         if ($slideshows.length > 0) {
             $slideshows.each(function (index, element) {
@@ -149,6 +152,46 @@ var EntryIndex = /** @class */ (function () {
     return EntryIndex;
 }());
 
+
+
+/***/ }),
+
+/***/ "./_src/ts/project/views/GlobalHeader.ts":
+/*!***********************************************!*\
+  !*** ./_src/ts/project/views/GlobalHeader.ts ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var GlobalHeader = /** @class */ (function () {
+    function GlobalHeader($elm) {
+        this.$elm = $elm;
+        this.init();
+    }
+    GlobalHeader.prototype.init = function () {
+        var _this = this;
+        this.$nav = this.$elm.find(".GlobalHeader__nav");
+        this.$btn = this.$elm.find(".MenuBtn");
+        this.$btn.on("click", function () {
+            _this.getIsOpened() ? _this.close() : _this.open();
+        });
+    };
+    GlobalHeader.prototype.getIsOpened = function () {
+        return this.$btn.hasClass("close");
+    };
+    GlobalHeader.prototype.open = function () {
+        this.$btn.addClass("close");
+        this.$nav.addClass("open");
+    };
+    GlobalHeader.prototype.close = function () {
+        this.$btn.removeClass("close");
+        this.$nav.removeClass("open");
+    };
+    return GlobalHeader;
+}());
+/* harmony default export */ __webpack_exports__["default"] = (GlobalHeader);
 
 
 /***/ }),
