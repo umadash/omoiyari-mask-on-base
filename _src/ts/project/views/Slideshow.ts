@@ -24,7 +24,6 @@ export default class Slideshow {
         return !!value;
       });
     this.srcs = srcs;
-    console.log(srcs);
 
     // 画像の数だけ、サムネイルを生成する
     let thumbs = "";

@@ -1,0 +1,23 @@
+.MainSlideshow {
+  background-color: #fefefe;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include pc-layout {
+    max-height: 560px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+
+    @include sp-layout {
+      padding-top: 100%;
+    }
+
+    @include pc-layout {
+      padding-top: 56.25%;
+    }
+  }
+}

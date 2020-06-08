@@ -1,12 +1,11 @@
 .ProductItemList {
   display: grid;
 
-  &.col1 {
-    grid-template-columns: 1fr;
-
+  &.col3-pc {
     @include pc-layout {
-      width: 640px;
-      gap: 80px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      // width: 80px;
     }
   }
 
