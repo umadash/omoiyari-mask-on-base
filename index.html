@@ -5,33 +5,34 @@
 <!--[if IE 8]><html class="ie ie8" lang="ja"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="ja">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="copyright" content="BASE" />
-    <title>{PageTitle}</title>
-    {FaviconTag} {JQueryTag} {CanonicalTag}
+<!--<![endif]-->
 
-    <meta name="BASE-Theme-Name" content="shop_100" />
-    <meta name="BASE-Theme-Version" content="18" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="copyright" content="BASE" />
+  <title>{PageTitle}</title>
+  {FaviconTag} {JQueryTag} {CanonicalTag}
 
-    {block:Hidden}
-    <!-- meta tag -->
-    {/block:Hidden} {block:ItemPage} {MetaItemInfoTag} {/block:ItemPage} {block:NotItemPage}
-    <meta http-equiv="X-UA-Compatible" content="IE=8 ; IE=9" />
-    {MetaShopInfoTag} {/block:NotItemPage} {block:AppsSearch}
-    <link rel="stylesheet" type="text/css" href="{BASEURL}/search/css/shopTemplate/search.css?{UpdateTime}" />
-    {/block:AppsSearch} {block:AppsItemLabel}
-    <link rel="stylesheet" type="text/css" href="{BASEURL}/item_label/css/ShopTemplate/style.css?{UpdateTime}" />
-    <script type="text/javascript" src="{BASEURL}/item_label/js/ShopTemplate/labelpostion.js?{UpdateTime}"></script>
-    {/block:AppsItemLabel} {block:AppsBlog}
-    <link href="{BlogFeedPageURL}" rel="alternate" type="application/rss+xml" title="Blog | {ShopName}" />
-    {/block:AppsBlog} {block:IndexPage} {HeadLinkNextPrevTag} {/block:IndexPage}
+  <meta name="BASE-Theme-Name" content="shop_100" />
+  <meta name="BASE-Theme-Version" content="18" />
 
-    <!--[if IE]>
+  {block:Hidden}
+  <!-- meta tag -->
+  {/block:Hidden} {block:ItemPage} {MetaItemInfoTag} {/block:ItemPage} {block:NotItemPage}
+  <meta http-equiv="X-UA-Compatible" content="IE=8 ; IE=9" />
+  {MetaShopInfoTag} {/block:NotItemPage} {block:AppsSearch}
+  <link rel="stylesheet" type="text/css" href="{BASEURL}/search/css/shopTemplate/search.css?{UpdateTime}" />
+  {/block:AppsSearch} {block:AppsItemLabel}
+  <link rel="stylesheet" type="text/css" href="{BASEURL}/item_label/css/ShopTemplate/style.css?{UpdateTime}" />
+  <script type="text/javascript" src="{BASEURL}/item_label/js/ShopTemplate/labelpostion.js?{UpdateTime}"></script>
+  {/block:AppsItemLabel} {block:AppsBlog}
+  <link href="{BlogFeedPageURL}" rel="alternate" type="application/rss+xml" title="Blog | {ShopName}" />
+  {/block:AppsBlog} {block:IndexPage} {HeadLinkNextPrevTag} {/block:IndexPage}
+
+  <!--[if IE]>
       <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
+  <!--[if lt IE 8]>
       <script src="https://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
       <script>
         window.attachEvent("onload", function () {
@@ -40,719 +41,551 @@
       </script>
     <![endif]-->
 
-    <script src="{BASEURL}/js/jquery.bottom-1.0.js"></script>
-    <script src="{BASEURL}/js/change_status.js?{UpdateTime}"></script>
+  <script src="{BASEURL}/js/jquery.bottom-1.0.js"></script>
+  <script src="{BASEURL}/js/change_status.js?{UpdateTime}"></script>
 
-    <link rel="stylesheet" href="/css/shopTemplate/v2/common.css?{UpdateTime}" />
-    <link rel="stylesheet" href="https://umadash.github.io/omoiyari-mask-on-base/app.css" />
+  <link rel="stylesheet" href="/css/shopTemplate/v2/common.css?{UpdateTime}" />
+  <link rel="stylesheet" href="https://umadash.github.io/omoiyari-mask-on-base/app.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{BASEURL}/css/shopTemplate/v3/shop_100.css?{UpdateTime}" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
 
-    {BackgroundTag}
-    <style type="text/css">
-      {block:NavColor}
-      .childCategoryList01_child,
-      .childCategoryList01_link,
-      .mainHeaderNavColor,
-      .tempTop .categoryTitle01,
-      .footerNav {
-      	color: {NavColor};
+
+  {BackgroundTag}
+  <style type="text/css">
+    {
+      block: NavColor
+    }
+
+    .childCategoryList01_child,
+    .childCategoryList01_link,
+    .mainHeaderNavColor,
+    .tempTop .categoryTitle01,
+    .footerNav {
+      color: {
+        NavColor
       }
-      {/block:NavColor}
-    </style>
 
-    <!--[if lt IE 9]>
+      ;
+    }
+
+      {
+      /block: NavColor
+    }
+  </style>
+
+  <!--[if lt IE 9]>
       <script src="//dhskp7m6mg2zv.cloudfront.net/theme_assets/shared/js/html5shiv.js"></script>
     <![endif]-->
 
-    {GoogleAnalyticsTag}
-  </head>
-  <body class="tempTop template{block:ItemPage} tempDetail{/block:ItemPage} theme--0">
-    <ul class="headNavi">
-      {block:AppsSearch}
-      <li class="itemSearch">
-        <form id="x_itemSearchForm" class="itemSearch__form" action="{SearchPageURL}" method="get">
-          <input class="itemSearch__field" type="text" name="q" placeholder="Search" value="{IndexPageSearch}" />
-          <button class="itemSearch__btn" type="submit"><span id="x_iconSearch" class="si-search"></span></button>
-        </form>
-      </li>
-      {/block:AppsSearch} {block:AppsI18n}
-      <li class="languageSelect">
-        {AppsI18nTag}
-      </li>
-      {/block:AppsI18n}
-    </ul>
+  {GoogleAnalyticsTag}
+</head>
 
-    {BASEMenuTag}
+<body class="tempTop template{block:ItemPage} tempDetail{/block:ItemPage} theme--0">
+  <ul class="headNavi">
+    {block:AppsSearch}
+    <li class="itemSearch">
+      <form id="x_itemSearchForm" class="itemSearch__form" action="{SearchPageURL}" method="get">
+        <input class="itemSearch__field" type="text" name="q" placeholder="Search" value="{IndexPageSearch}" />
+        <button class="itemSearch__btn" type="submit"><span id="x_iconSearch" class="si-search"></span></button>
+      </form>
+    </li>
+    {/block:AppsSearch} {block:AppsI18n}
+    <li class="languageSelect">
+      {AppsI18nTag}
+    </li>
+    {/block:AppsI18n}
+  </ul>
 
-    <link rel="stylesheet" type="text/css" href="{BASEURL}/css/colorbox.css" />
-    <link rel="stylesheet" href="{BASEURL}/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="{BASEURL}/css/bootstrap-select.min.css" />
+  {BASEMenuTag}
 
-    {block:IndexPage}
-    <span id="max_page" style="display: none;">{MaxPageNumber}</span>
-    <span id="next_page" style="display: none;">{NextPageNumber}</span>
-    {/block:IndexPage}
+  <link rel="stylesheet" type="text/css" href="{BASEURL}/css/colorbox.css" />
+  <link rel="stylesheet" href="{BASEURL}/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{BASEURL}/css/bootstrap-select.min.css" />
 
-    <!-- script:Facebook -->
-    <div id="fb-root"></div>
-    <script>
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
+  {block:IndexPage}
+  <span id="max_page" style="display: none;">{MaxPageNumber}</span>
+  <span id="next_page" style="display: none;">{NextPageNumber}</span>
+  {/block:IndexPage}
+
+  <!-- script:Facebook -->
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=350947278320210&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+
+  <!-- script:Twitter -->
+  <script>
+    !(function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (!d.getElementById(id)) {
         js = d.createElement(s);
         js.id = id;
-        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=350947278320210&version=v2.0";
+        js.src = "//platform.twitter.com/widgets.js";
         fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
+      }
+    })(document, "script", "twitter-wjs");
+  </script>
 
-    <!-- script:Twitter -->
-    <script>
-      !(function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (!d.getElementById(id)) {
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "//platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }
-      })(document, "script", "twitter-wjs");
-    </script>
+  <header class="GlobalHeader" id="GlobalHeader">
+    <h1 class="GlobalHeader__logo"><a href="{IndexPageURL}" id="logo"><svg data-name="レイヤー 1"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.94 134.12">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
 
-    <header id="mainHeader">
-      <h1><a href="{IndexPageURL}" id="logo">{LogoTag}</a></h1>
-    </header>
+              .cls-1,
+              .cls-2 {
+                stroke: #e60012;
+                stroke-width: 8.61px;
+              }
 
-    <header class="GlobalHeader">
-      <h1 class="GlobalHeader__logo"><a href="{IndexPageURL}" id="logo">{LogoTag}</a></h1>
-      <nav class="GlobalHeader__nav">
-        <ul>
-          <li><a class="mainHeaderNavColor" href="{IndexPageURL}">HOME</a></li>
-          <li><a class="mainHeaderNavColor" href="{AboutPageURL}">ABOUT</a></li>
-          <li><a class="mainHeaderNavColor" href="{ContactPageURL}">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+              .cls-2 {
+                fill: #fff;
+              }
 
-    <div class="container">
-      <section class="SectionMain">
-        <h1 class="SectionMain__title">{LogoTag}</h1>
-        <p class="SectionMain__copy">思いやりマスクは、メイドインジャパン品質で ウイルスの主な感染源からパートナーと自分を守り、 繰り返し洗えるサスティナブルなマスクです。</p>
-      </section>
-
-      <section></section>
-
-      <nav id="main_navigation">
-        <ul class="row">
-          <li class="column"><a class="mainHeaderNavColor" href="{IndexPageURL}">home</a></li>
-          <li class="column"><a class="mainHeaderNavColor" href="{AboutPageURL}">about</a></li>
-          {block:AppsBlog}
-          <li class="column"><a class="mainHeaderNavColor" href="{BlogPageURL}">blog</a></li>
-          {/block:AppsBlog} {block:AppsCoinFunding}
-          <li class="column"><a class="mainHeaderNavColor" href="{CoinFundingPageURL}">coin</a></li>
-          {/block:AppsCoinFunding} {block:AppsItemCategory}
-          <li class="column">
-            <div id="category-menu">
-              <span class="mainHeaderNavColor">category</span>
-              <div class="category-list">
-                {AppsItemCategoryCategoriesTag}
-              </div>
-            </div>
-          </li>
-          {/block:AppsItemCategory}
-          <li class="column"><a class="mainHeaderNavColor" href="{ContactPageURL}">contact</a></li>
-        </ul>
-      </nav>
-
-      {block:AppsItemCategory} {block:IndexPageCategory}
-      <h2 class="categoryTitle01">{IndexPageCategory}</h2>
-
-      {block:HasAppsItemCategoryChildCategories}
-      <ul class="childCategoryList01">
-        {block:AppsItemCategoryChildCategories}
-        <li class="childCategoryList01_child"><a href="{AppsItemCategoryChildCategoryPageURL}" class="childCategoryList01_link">{AppsItemCategoryChildCategoryName}</a></li>
-        {/block:AppsItemCategoryChildCategories}
+              .cls-3 {
+                fill: #e60012;
+              }
+            </style>
+          </defs>
+          <path class="cls-1"
+            d="M101.58,93.9l70.82.18h.32l.73,0c9.77.24,15.84-1.43,22.6-9.43a27.85,27.85,0,0,0-20.61-45.82h-.33L104.3,39" />
+          <path class="cls-1"
+            d="M102.65,39l-70.82-.18h-.32A27.85,27.85,0,0,0,10.89,84.63c6.76,8,12.84,9.67,22.61,9.43l.72,0h.32l70.82-.18" />
+          <path class="cls-2"
+            d="M160.79,60.38A34.51,34.51,0,0,0,134.23,4.31,34.06,34.06,0,0,0,104.4,22,34.06,34.06,0,0,0,40.45,38.75,34.5,34.5,0,0,0,48,60.38h0l.25.3,56.19,66.75L157.3,64.54C157.67,64.12,160.79,60.38,160.79,60.38Z" />
+          <circle class="cls-3" cx="104.4" cy="60.77" r="14.63" />
+        </svg></a></h1>
+    <nav class="GlobalHeader__nav">
+      <ul>
+        <li><a class="mainHeaderNavColor" href="{IndexPageURL}">HOME</a></li>
+        <li><a class="mainHeaderNavColor" href="{AboutPageURL}">ABOUT</a></li>
+        <li><a class="mainHeaderNavColor" href="{ContactPageURL}">CONTACT</a></li>
       </ul>
-      {/block:HasAppsItemCategoryChildCategories} {/block:IndexPageCategory} {/block:AppsItemCategory} {block:IndexPage} {block:AppsBlogArticleIsPinned} {block:NoIndexPageCategory}
-      {block:NoIndexPageSearch}
-      <div class="pinnedBlog">
-        <p class="pinnedBlog_title mainHeaderNavColor normal">
-          <a href="{AppsBlogArticlePageURL}">{AppsBlogArticleTitle}</a>
-        </p>
-      </div>
-      {/block:NoIndexPageSearch} {/block:NoIndexPageCategory} {/block:AppsBlogArticleIsPinned} {block:ShopPublic} {block:IndexPageSearch}
-      <h3 class="mainHeaderNavColor titleForSearchResult">{lang:ItemSearchResult}</h3>
-      {/block:IndexPageSearch} {block:HasItems}
-      <section id="products">
-        <div class="SectionTitle">
-          <h1 class="SectionTitle__jp">製品</h1>
-          <p class="SectionTitle__en">PRODUCTS</p>
+    </nav>
+    <button class="GlobalHeader__menu MenuBtn">メニューを開く</button>
+  </header>
+
+  <main class="Contents SectionWrapper">
+    {block:IndexPage}
+    <div class="MainSlideshow"
+      data-srcs="https://basefile.akamaized.net/omoiyarimask-theshop-jp/5eddd8e4b6692/452bffdeaeb4dd520204a5ff1f7001cf_400x400.jpeg">
+    </div>
+    <section class="SectionMain">
+      <h1 class="SectionMain__title">{LogoTag}</h1>
+      <div class="SectionMain__content">
+        <div class="EditableContent concept">
+          <p>{ShopIntroduction}</p>
         </div>
-        <ul class="product_list_wrap row">
+      </div>
+      <a class="SectionMain__btn Btn round red" href="{AboutPageURL}">コンセプト</a>
+    </section>
+    {/block:IndexPage}
+
+
+    {block:AppsItemCategory} {block:IndexPageCategory}
+    <h2 class="categoryTitle01">{IndexPageCategory}</h2>
+
+    {block:HasAppsItemCategoryChildCategories}
+    <ul class="childCategoryList01">
+      {block:AppsItemCategoryChildCategories}
+      <li class="childCategoryList01_child"><a href="{AppsItemCategoryChildCategoryPageURL}"
+          class="childCategoryList01_link">{AppsItemCategoryChildCategoryName}</a></li>
+      {/block:AppsItemCategoryChildCategories}
+    </ul>
+    {/block:HasAppsItemCategoryChildCategories} {/block:IndexPageCategory} {/block:AppsItemCategory} {block:IndexPage}
+    {block:AppsBlogArticleIsPinned} {block:NoIndexPageCategory}
+    {block:NoIndexPageSearch}
+    <div class="pinnedBlog">
+      <p class="pinnedBlog_title mainHeaderNavColor normal">
+        <a href="{AppsBlogArticlePageURL}">{AppsBlogArticleTitle}</a>
+      </p>
+    </div>
+    {/block:NoIndexPageSearch} {/block:NoIndexPageCategory} {/block:AppsBlogArticleIsPinned} {block:ShopPublic}
+    {block:IndexPageSearch}
+    <h3 class="mainHeaderNavColor titleForSearchResult">{lang:ItemSearchResult}</h3>
+    {/block:IndexPageSearch} {block:HasItems}
+    <section id="products" class="SectionBasic gray SectionProducts">
+      <div class="SectionTitle">
+        <h1 class="SectionTitle__jp">製品</h1>
+        <p class="SectionTitle__en">PRODUCTS</p>
+      </div>
+
+      <div class="SectionBasic__content">
+        <ul class="product_list_wrap row ProductItemList col3-pc col2-sp">
           {block:Items}
           <li class="product_list">
-            <a href="{ItemPageURL}">
-              {block:AppsItemLabel} {AppsItemLabelTag} {/block:AppsItemLabel}
-              <div class="item_meta {block:ItemNowOnSale}{block:NoItemStock}soldOut{/block:NoItemStock}{/block:ItemNowOnSale} {block:ItemEndOfSale}soldOut{/block:ItemEndOfSale}">
-                {block:HasItemStock} {block:ItemWatingForSale}
-                <p class="comingSoon">COMING SOON</p>
-                {/block:ItemWatingForSale} {block:ItemNowOnSale}{block:ItemPreOrder}
-                <p class="preOrder">{lang:PreOrderItem}</p>
-                {/block:ItemPreOrder}{block:ItemLottery}
-                <p class="lottery">{lang:LotteryItem}</p>
-                {/block:ItemLottery}{/block:ItemNowOnSale} {block:ItemEndOfSale}
-                <p class="soldOutText">SOLD OUT</p>
-                {/block:ItemEndOfSale} {/block:HasItemStock} {block:NoItemStock} {block:ItemWatingForSale}
-                <p class="comingSoon">COMING SOON</p>
-                {/block:ItemWatingForSale} {block:ItemNowOnSale}
-                <p class="soldOutText">SOLD OUT</p>
-                {/block:ItemNowOnSale} {block:ItemEndOfSale}
-                <p class="soldOutText">SOLD OUT</p>
-                {/block:ItemEndOfSale} {/block:NoItemStock}
-                <h2 class="title">{ItemTitle}</h2>
-                {block:NoItemProperPrice}
-                <!-- 定価 -->
-                <div class="price">{ItemPrice}</div>
-                {/block:NoItemProperPrice} {block:HasItemProperPrice}
-                <!-- 割引 -->
-                <p class="discountPrice">
-                  <span class="discountPrice__ratio">{ItemDiscountRate}</span>
-                  <span class="discountPrice__calcPrice">{ItemPrice}</span>
-                </p>
-                {/block:HasItemProperPrice}
-                <div class="detail">
-                  <p class="detailText">{lang:SeeDetails}</p>
-                </div>
+            <article class="ProductItem" data-text="{ItemDetail}">
+              <div class="ProductItem__img"
+                style="background-image:url({block:ItemImage1}{ItemImage1URL-300}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1})">
+                <a href="{ItemPageURL}"></a></div>
+              <div class="ProductItem__info">
+                <a href="{ItemPageURL}">
+                  <div class="ProductItem__main">
+                    <h1 class="ProductItem__name">{ItemTitle}</h1>
+                    <small class="ProductItem__copy">{ItemDetail}</small>
+                  </div>
+
+                  <div class="ProductItem__price">
+                    {block:NoItemProperPrice}
+                    <span>{ItemPrice}</span>
+                    {/block:NoItemProperPrice}
+
+                    {block:ItemEndOfSale}
+                    <span class="soldOutText">SOLD OUT</span>
+                    {/block:ItemEndOfSale}
+                  </div>
+                </a>
               </div>
-            </a>
-            <div class="image_container">
-              <img src="{block:ItemImage1}{ItemImage1URL-300}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1}" alt="{ItemTitle}" title="{ItemTitle}" class="image_resize" />
-            </div>
+            </article>
           </li>
+
           {/block:Items}
         </ul>
-        <div id="loading" style="display: none; width: 100%;"><img src="/img/loading.gif" style="padding: 20px 0; width: 220px;" /></div>
-      </section>
-      {/block:HasItems} {block:NoItems}
-      <section class="tmpBox">
-        <p>{lang:NoItemsMessage}</p>
-      </section>
-      {/block:NoItems} {/block:ShopPublic} {block:NotShopPublic}
-      <section class="tmpBox">
-        <p>{lang:NotShopPublicMessage}</p>
-      </section>
-      {/block:NotShopPublic}
+        <div id="loading" style="display: none; width: 100%;"><img src="/img/loading.gif"
+            style="padding: 20px 0; width: 220px;" /></div>
+      </div>
+    </section>
+    {/block:HasItems} {block:NoItems}
+    <section class="tmpBox">
+      <p>{lang:NoItemsMessage}</p>
+    </section>
+    {/block:NoItems} {/block:ShopPublic} {block:NotShopPublic}
+    <section class="tmpBox">
+      <p>{lang:NotShopPublicMessage}</p>
+    </section>
+    {/block:NotShopPublic}
 
-      <script type="text/javascript">
-        var process_flg = false;
-        var end_flg = false;
-        $(window).bottom({ proximity: 0.05 });
-        $(window).on("bottom", function () {
-          if (process_flg == false && end_flg == false) {
-            var max_page = $("#max_page").text();
-            var next_page = $("#next_page").text();
-            if (eval(max_page) >= eval(next_page)) {
-              $.ajax({
-                url: "{LoadItemsPageURL}" + next_page + "{LoadItemsPageURLParams}",
-                dataType: "html",
-                beforeSend: function () {
-                  process_flg = true;
-                  $("#loading").css("display", "block");
-                },
-                success: function (data) {
-                  $("#products ul").append(data);
-                  next_page = eval(next_page) + 1;
-                  $("#next_page").text(next_page);
-                },
-                complete: function () {
-                  process_flg = false;
-                  $("#loading").css("display", "none");
-                },
-              });
-            } else {
-              end_flg = true;
-            }
+    <script type="text/javascript">
+      var process_flg = false;
+      var end_flg = false;
+      $(window).bottom({ proximity: 0.05 });
+      $(window).on("bottom", function () {
+        if (process_flg == false && end_flg == false) {
+          var max_page = $("#max_page").text();
+          var next_page = $("#next_page").text();
+          if (eval(max_page) >= eval(next_page)) {
+            $.ajax({
+              url: "{LoadItemsPageURL}" + next_page + "{LoadItemsPageURLParams}",
+              dataType: "html",
+              beforeSend: function () {
+                process_flg = true;
+                $("#loading").css("display", "block");
+              },
+              success: function (data) {
+                $("#products ul").append(data);
+                next_page = eval(next_page) + 1;
+                $("#next_page").text(next_page);
+              },
+              complete: function () {
+                process_flg = false;
+                $("#loading").css("display", "none");
+              },
+            });
+          } else {
+            end_flg = true;
           }
-        });
-      </script>
-      {/block:IndexPage} {block:ItemPage}
+        }
+      });
+    </script>
+    {/block:IndexPage} {block:ItemPage}
 
-      <div class="wrapper">
-        <section class="content clearfix" itemscope="" itemtype="http://schema.org/Product">
-          {IllegalReportMessageTag}
-          <div class="kakaku">
-            <ul class="bxslider">
-              <li>
-                <div class="img_box">
-                  {block:AppsItemLabel} {AppsItemLabelTag} {/block:AppsItemLabel}
-                  <a href="{block:ItemImage1}{ItemImage1URL-origin}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1}" class="ajax btn grn save" rel="group">
-                    <img
-                      src="{block:ItemImage1}{ItemImage1URL-500}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1}"
-                      alt="{ItemTitle}"
-                      title=""
-                      id="img_large"
-                      itemprop="image"
-                    />
-                  </a>
-                </div>
-              </li>
-              {block:ItemImage2}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage2URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage2URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage2} {block:ItemImage3}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage3URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage3URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage3} {block:ItemImage4}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage4URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage4URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage4} {block:ItemImage5}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage5URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage5URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage5} {block:ItemImage6}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage6URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage6URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage6} {block:ItemImage7}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage7URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage7URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage7} {block:ItemImage8}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage8URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage8URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage8} {block:ItemImage9}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage9URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage9URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage9} {block:ItemImage10}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage10URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage10URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage10} {block:ItemImage11}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage11URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage11URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage11} {block:ItemImage12}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage12URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage12URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage12} {block:ItemImage13}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage13URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage13URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage13} {block:ItemImage14}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage14URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage14URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage14} {block:ItemImage15}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage15URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage15URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage15} {block:ItemImage16}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage16URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage16URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage16} {block:ItemImage17}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage17URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage17URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage17} {block:ItemImage18}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage18URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage18URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage18} {block:ItemImage19}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage19URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage19URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage19} {block:ItemImage20}
-              <li style="display: none;">
-                <div class="img_box">
-                  <a href="{ItemImage20URL-origin}" class="ajax btn grn save" rel="group">
-                    <img src="{ItemImage20URL-500}" alt="" title="" />
-                  </a>
-                </div>
-              </li>
-              {/block:ItemImage20}
-            </ul>
-            <div id="bx-pager">
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{block:ItemImage1}{ItemImage1URL-76}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1}" alt="{ItemTitle}" title="" id="img_large" />
-                </div>
-              </a>
-              {block:ItemImage2}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage2URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage2} {block:ItemImage3}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage3URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage3} {block:ItemImage4}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage4URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage4} {block:ItemImage5}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage5URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage5} {block:ItemImage6}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage6URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage6} {block:ItemImage7}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage7URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage7} {block:ItemImage8}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage8URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage8} {block:ItemImage9}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage9URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage9} {block:ItemImage10}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage10URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage10} {block:ItemImage11}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage11URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage11} {block:ItemImage12}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage12URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage12} {block:ItemImage13}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage13URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage13} {block:ItemImage14}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage14URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage14} {block:ItemImage15}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage15URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage15} {block:ItemImage16}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage16URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage16} {block:ItemImage17}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage17URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage17} {block:ItemImage18}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage18URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage18} {block:ItemImage19}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage19URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage19} {block:ItemImage20}
-              <a data-slide-index="{Counter}" href="">
-                <div class="small_img_box">
-                  <img src="{ItemImage20URL-76}" alt="" title="" />
-                </div>
-              </a>
-              {/block:ItemImage20}
-            </div>
-          </div>
 
-          <section class="row">
-            <div class="descri">
-              <div class="product">
-                <div class="product_top">
-                  <h2 itemprop="name">{ItemTitle}{block:AppsDownload}{block:ItemDigitalContent}({ItemDigitalContent}){/block:ItemDigitalContent}{/block:AppsDownload}</h2>
-                </div>
-                <div class="itemAttention clearfix" itemprop="offers" itemscope="" itemtype="http://schema.org/offer">
-                  <div class="{block:ItemNowOnSale}{block:NoItemStock}soldOut{/block:NoItemStock}{/block:ItemNowOnSale} {block:ItemEndOfSale}soldOut{/block:ItemEndOfSale}">
+    <section class="content clearfix SectionProduct" itemscope="" itemtype="http://schema.org/Product">
+      {IllegalReportMessageTag}
+      <div class="kakaku SectionProduct__img Slideshow"
+        data-srcs="{ItemImage1URL-origin},{ItemImage2URL-origin},{ItemImage3URL-origin},{ItemImage4URL-origin},{ItemImage5URL-origin},{ItemImage6URL-origin}">
+        <div class="Slideshow__content"></div>
+        <div class="Slideshow__thumbs clearfix"></div>
+      </div>
+
+      <div class="SectionProduct__meta">
+
+        <div class="ProductInfo SectionProduct__info">
+          <div class="descri">
+            <div class="product">
+              <div class="ProductInfo__main">
+                <h1 class="ProductInfo__name" itemprop="name">
+                  {ItemTitle}{block:AppsDownload}{block:ItemDigitalContent}({ItemDigitalContent}){/block:ItemDigitalContent}{/block:AppsDownload}
+                </h1>
+                <small class="ProductInfo__price">
+                  <div
+                    class="{block:ItemNowOnSale}{block:NoItemStock}soldOut{/block:NoItemStock}{/block:ItemNowOnSale} {block:ItemEndOfSale}soldOut{/block:ItemEndOfSale}">
                     {block:NoItemProperPrice}
                     <!-- 定価 -->
                     <span class="price_del"><span class="price">{ItemPrice}</span></span>
-                    {block:ItemEndOfSale}<span class="price_soldout">SOLD OUT</span>{/block:ItemEndOfSale} {block:ItemNowOnSale}{block:NoItemStock}<span class="price_soldout">SOLD OUT</span
-                    >{/block:NoItemStock}{/block:ItemNowOnSale} {/block:NoItemProperPrice} {block:HasItemProperPrice}
+                    {block:ItemEndOfSale}<span class="price_soldout">SOLD OUT</span>{/block:ItemEndOfSale}
+                    {block:ItemNowOnSale}{block:NoItemStock}<span class="price_soldout">SOLD
+                      OUT</span>{/block:NoItemStock}{/block:ItemNowOnSale} {/block:NoItemProperPrice}
+                    {block:HasItemProperPrice}
                     <!-- 割引 -->
                     <p class="discountPrice">
-                      <span class="discountPrice__default">{ItemProperPrice}</span><span class="discountPrice__ratio">{ItemDiscountRate}</span><br />
+                      <span class="discountPrice__default">{ItemProperPrice}</span><span
+                        class="discountPrice__ratio">{ItemDiscountRate}</span><br />
                       <span class="price_del"><span class="discountPrice__calcPrice">{ItemPrice}</span></span>
-                      {block:ItemEndOfSale}<span class="price_soldout">SOLD OUT</span>{/block:ItemEndOfSale} {block:ItemNowOnSale}{block:NoItemStock}<span class="price_soldout">SOLD OUT</span
-                      >{/block:NoItemStock}{/block:ItemNowOnSale}
+                      {block:ItemEndOfSale}<span class="price_soldout">SOLD OUT</span>{/block:ItemEndOfSale}
+                      {block:ItemNowOnSale}{block:NoItemStock}<span class="price_soldout">SOLD
+                        OUT</span>{/block:NoItemStock}{/block:ItemNowOnSale}
                     </p>
                     {/block:HasItemProperPrice}
                   </div>
+                </small>
+              </div>
 
-                  {block:ItemWatingForSale}
-                  <p class="comingSoon">COMING SOON</p>
-                  {/block:ItemWatingForSale}
+              <div class="ProductInfo__purchase">
+                {block:PurchaseForm}
+                <div class="ProductInfo__selects">
+                  {ItemSelectTag}
                 </div>
 
-                {ItemAttentionTag}
-              </div>
-              <div style="clear: both;"></div>
-            </div>
 
-            {block:PurchaseForm} {ItemSelectTag} {PurchaseButton} {/block:PurchaseForm}
-
-            <div class="shareButtons">
-              {SocialButtonTag}
-              <div class="twitter">
-                <a href="http://twitter.com/share" class="twitter-share-button" data-url="{ItemRedirectUrl}" data-lang="ja" data-hashtags="{TwitterDataHashtags}" data-via="{TwitterDataVia}"
-                  >{lang:Tweet}</a
-                >
-              </div>
-              <div class="facebook">
-                <div class="fb-share-button" data-layout="button_count" data-size="small" data-mobile-iframe="true">
-                  <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">シェア</a>
+                <div class="ProductInfo__foot">
+                  {PurchaseButton} {ItemAttentionTag}
                 </div>
+                {/block:PurchaseForm}
               </div>
-              {EmbedWidgetTag}
-            </div>
-            <div id="reportBtn">
-              {IllegalReportTag}
-            </div>
-            <p class="explanation" style="word-wrap: break-word; line-height: 1.5em;" itemprop="description">{ItemDetail}</p>
-            {block:AppsItemDetailCustom} {AdditionalItemDetail} {AdditionalItemDetailDefaultCssAndJs} {/block:AppsItemDetailCustom}
-            <div class="clearfix"></div>
-          </section>
-        </section>
 
-        {block:AppsReview} {AppsReviewTag} {/block:AppsReview}
-      </div>
 
-      <script src="{BASEURL}/js/jquery.colorbox-min.js"></script>
-      <script src="{BASEURL}/js/jquery.bxslider.min.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function () {
-          $(".bxslider").bxSlider({
-            controls: false,
-            pagerCustom: "#bx-pager",
-            adaptiveHeight: true,
-            mode: "fade",
-          });
-          $(".ajax").colorbox({ className: "itemCb", maxWidth: "1000px", fastIframe: false, current: false });
-        });
-      </script>
-      {/block:ItemPage} {block:AboutPage}
-      <div class="main">
-        <div id="about">
-          <h2>about</h2>
-          <p>{ShopIntroduction}</p>
-          <div class="social">
-            <ul class="clearfix">
-              {block:ShopAmebaId}
-              <li>
-                <a href="http://ameblo.jp/{ShopAmebaId}" target="_blank"><img src="/img/shop/ambicon.png" height="30" width="30" /></a>
-              </li>
-              {/block:ShopAmebaId} {block:ShopFacebookId}
-              <li>
-                <a href="https://www.facebook.com/{ShopFacebookId}" target="_blank"><img src="/img/shop/fbicon.png" height="30" width="30" /></a>
-              </li>
-              {/block:ShopFacebookId} {block:ShopTwitterId}
-              <li class="tw">
-                <a href="https://twitter.com/{ShopTwitterId}" target="_blank"><img src="/img/shop/twicon.png" height="30" width="30" /></a>
-              </li>
-              {/block:ShopTwitterId} {block:ShopLineId}
-              <li>
-                <a href="https://line.me/R/ti/p/%40{ShopLineId}" target="_blank"><img src="/img/shop/lineicon.png" height="30" width="30" /></a>
-              </li>
-              {/block:ShopLineId} {block:ShopInstagramId}
-              <li>
-                <a href="http://instagram.com/{ShopInstagramId}" target="_blank"><img src="/img/shop/igicon.png" height="30" width="30" /></a>
-              </li>
-              {/block:ShopInstagramId}
-            </ul>
+
+              <div class="itemAttention clearfix" itemprop="offers" itemscope="" itemtype="http://schema.org/offer">
+
+
+                {block:ItemWatingForSale}
+                <p class="comingSoon">COMING SOON</p>
+                {/block:ItemWatingForSale}
+              </div>
+
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+
+
+          <div class="shareButtons">
+            {SocialButtonTag}
+            <div class="twitter">
+              <a href="http://twitter.com/share" class="twitter-share-button" data-url="{ItemRedirectUrl}"
+                data-lang="ja" data-hashtags="{TwitterDataHashtags}" data-via="{TwitterDataVia}">{lang:Tweet}</a>
+            </div>
+            <div class="facebook">
+              <div class="fb-share-button" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+                <a class="fb-xfbml-parse-ignore" target="_blank"
+                  href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">シェア</a>
+              </div>
+            </div>
+            {EmbedWidgetTag}
+          </div>
+          <div id="reportBtn">
+            {IllegalReportTag}
           </div>
         </div>
-      </div>
-      {/block:AboutPage} {block:ContactPage} {ContactContentsTag} {/block:ContactPage} {block:PrivacyPage} {PrivacyContentsTag} {/block:PrivacyPage} {block:LawPage} {LawContentsTag} {/block:LawPage}
-      {block:BlogPage} {BlogContentsTag} {/block:BlogPage}
-    </div>
 
-    <footer class="GlobalFooter">
-      <ul class="GlobalFooter__links">
-        <li><a class="footerNav" href="{PrivacyPageURL}">{lang:Privacy}</a></li>
-        <li><a class="footerNav" href="{LawPageURL}">{lang:Law}</a></li>
-      </ul>
-      <small class="GlobalFooter__copyright">Copyright &copy; The ZAC COMPANY All Rights Reserved.</small>
-    </footer>
+        <div class="SectionProduct__content" data-texts="{ItemDetail}">
+          <div class="EditableContent">
 
-    <footer id="mainFooter">
-      <ul class="clearfix">
-        <li><a class="footerNav" href="{PrivacyPageURL}">{lang:Privacy}</a></li>
-        <li><a class="footerNav" href="{LawPageURL}">{lang:Law}</a></li>
-        <li class="boxRight">
-          <div class="socialBtnList clearfix">
-            <div class="fb sns">
-              <div class="fb-share-button" data-href="{ShopURL}/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
-                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-                  >シェア</a
-                >
-              </div>
-            </div>
-            <div class="tw sns">
-              <a
-                href="http://twitter.com/share"
-                class="twitter-share-button"
-                data-url="{ShopRedirectUrl}"
-                data-lang="ja"
-                data-hashtags="{TwitterDataHashtags}"
-                data-via="{TwitterDataVia}"
-                data-text="{ShopName}"
-                >{lang:Tweet}</a
-              >
+
+            {block:AppsItemDetailCustom}
+            {AdditionalItemDetail}
+            {AdditionalItemDetailDefaultCssAndJs}
+            {/block:AppsItemDetailCustom}
+          </div>
+        </div>
+    </section><!-- /.SectionProduct -->
+
+
+
+    {block:AppsReview} {AppsReviewTag} {/block:AppsReview}
+
+    <script src="{BASEURL}/js/jquery.colorbox-min.js"></script>
+    <script src="{BASEURL}/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".bxslider").bxSlider({
+          controls: false,
+          pagerCustom: "#bx-pager",
+          adaptiveHeight: true,
+          mode: "fade",
+        });
+        $(".ajax").colorbox({ className: "itemCb", maxWidth: "1000px", fastIframe: false, current: false });
+      });
+    </script>
+    {/block:ItemPage}
+
+    {block:AboutPage}
+    <div class="main">
+      <div id="about" class="SectionWrapper">
+        <section class="SectionMain">
+          <h1 class="SectionMain__title">{LogoTag}</h1>
+          <div class="SectionMain__content">
+            <div class="EditableContent concept">
+              <p>あなたは、コロナウイルスに感染していないと断言できますか？<br />
+                あなたは、感染していると診断されるまでに何人に飛沫を浴びせましたか？<br />
+                もし、あなたがマスクをしていたら何人の感染を防げましたか？</p>
+
+              <p>マスクしないことで、知らず知らずの間に<br />
+                あなたは加害者になっている可能性があります。</p>
+
+              <p>あなたがマスクをしていれば、<br />
+                あなたの愛する人の命を守ることができます。</p>
+
+              <p>マスクは、自分が感染したくないという利己的な目的と、<br />
+                あなたの自分の愛する人を感染から守りたいという利他的な目的の<br />
+                ２つの目的のためにすることではないでしょうか。</p>
+
+              <p>
+                マスクをしているということは「思いやり」があり、<br />
+                他人への配慮と優し和の表れであり、形であると思います。<br />
+                その心意気がCool!になることを祈って！
+              </p>
+
+              <p>
+                あなたは、マスクをしている姿が美しくないと思うかもしれません。<br />
+                しかし、あなたの心は美しい。奥ゆかしく愛に満ち溢れた人なのです。<br />
+                マスクは愛する人への「思いやり」と「優しさ」のかたちなのです。
+              </p>
+
+              <p>
+                私たちは、天然の力を信じます。<br />
+                私たちは、自然治癒と免疫力を信じます。<br />
+                私たちは、メイドインジャパンの伝統と革新、品質の高いものづくりの力を信じます。<br />
+                私たちは、なによりも日本人の「思いやり」と「優しさ」の力を信じます。<br />
+                私たちは、あなたを信じます。
+              </p>
             </div>
           </div>
-        </li>
-      </ul>
-    </footer>
+        </section>
 
-    <input id="base_url" type="hidden" value="{ShopURL}" />
-  </body>
+        <section class="SectionBasic SectionProducts">
+          <div class="SectionTitle">
+            <h1 class="SectionTitle__jp">デザイン</h1>
+            <p class="SectionTitle__en">DESIGN</p>
+          </div>
+
+          <div class="SectionBasic__content EditableContent">
+            <figure>
+              <img src="https://basefile.akamaized.net/omoiyarimask-theshop-jp/5eaa47b25612b/mask-design.png"
+                alt="思いやりマスクのデザイン" />
+            </figure>
+          </div>
+        </section>
+
+        <section class="SectionBasic SectionProducts">
+          <div class="SectionTitle">
+            <h1 class="SectionTitle__jp">協力</h1>
+            <p class="SectionTitle__en">PARTNERS</p>
+          </div>
+
+          <div class="SectionBasic__content">
+            <figure>
+              <img src="https://basefile.akamaized.net/omoiyarimask-theshop-jp/5eaa483473b9a/mask-partners.png"
+                alt="思いやりマスクのパートナー" />
+            </figure>
+          </div>
+        </section>
+
+
+        <div class="social">
+          <ul class="clearfix">
+            {block:ShopAmebaId}
+            <li>
+              <a href="http://ameblo.jp/{ShopAmebaId}" target="_blank"><img src="/img/shop/ambicon.png" height="30"
+                  width="30" /></a>
+            </li>
+            {/block:ShopAmebaId} {block:ShopFacebookId}
+            <li>
+              <a href="https://www.facebook.com/{ShopFacebookId}" target="_blank"><img src="/img/shop/fbicon.png"
+                  height="30" width="30" /></a>
+            </li>
+            {/block:ShopFacebookId} {block:ShopTwitterId}
+            <li class="tw">
+              <a href="https://twitter.com/{ShopTwitterId}" target="_blank"><img src="/img/shop/twicon.png" height="30"
+                  width="30" /></a>
+            </li>
+            {/block:ShopTwitterId} {block:ShopLineId}
+            <li>
+              <a href="https://line.me/R/ti/p/%40{ShopLineId}" target="_blank"><img src="/img/shop/lineicon.png"
+                  height="30" width="30" /></a>
+            </li>
+            {/block:ShopLineId} {block:ShopInstagramId}
+            <li>
+              <a href="http://instagram.com/{ShopInstagramId}" target="_blank"><img src="/img/shop/igicon.png"
+                  height="30" width="30" /></a>
+            </li>
+            {/block:ShopInstagramId}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {/block:AboutPage}
+
+    {block:ContactPage} {ContactContentsTag} {/block:ContactPage} {block:PrivacyPage} {PrivacyContentsTag}
+    {/block:PrivacyPage} {block:LawPage} {LawContentsTag} {/block:LawPage}
+    {block:BlogPage} {BlogContentsTag} {/block:BlogPage}
+  </main>
+
+  <section class="SectionBasic">
+    <div class="SectionTitle">
+      <h1 class="SectionTitle__jp">尼ケ坂サロンとは？</h1>
+      <p class="SectionTitle__en">What's Amagasala Salon?</p>
+    </div>
+
+    <div class="SectionBasic__content LayoutGrid">
+      <div class="CompanyContent">
+        <div class="CompanyContent__left">
+          <div class="CompanyContent__head">
+
+            <div class="CompanyContent__description EditableContent center">
+              <h1>タイトル</h1>
+              <p>説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+              <p>説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+              <p>説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+              <a class="Btn red round" href="http://www.amagasaka.com/" target="_blank">ウェブサイトへ</a>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="CompanyContent__right MapWrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13043.02573118636!2d136.91204433362975!3d35.18762278344983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbba222e32b10eef7!2sAmagasaka%20Salon!5e0!3m2!1sja!2sjp!4v1591599012132!5m2!1sja!2sjp"
+            width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="GlobalFooter">
+    <ul class="GlobalFooter__links">
+      <li><a class="footerNav" href="{PrivacyPageURL}">{lang:Privacy}</a></li>
+      <li><a class="footerNav" href="{LawPageURL}">{lang:Law}</a></li>
+    </ul>
+    <small class="GlobalFooter__copyright">Copyright &copy; The ZAC COMPANY All Rights Reserved.</small>
+  </footer>
+
+  <input id="base_url" type="hidden" value="{ShopURL}" />
+  <script type="text/javascript"
+    src="https://umadash.github.io/omoiyari-mask-on-base/js/original.js?{UpdateTime}"></script>
+</body>
+
 </html>
 {/block:NotLoadItemsPage} {block:LoadItemsPage} {block:Items}
 <li class="product_list">
-  <article class="ProductItem">
-    <div class="ProductItem__img" style="background-image: url();"></div>
-    <div class="ProductItem__info">
-      <div class="ProductItem__main">
-        <h1 class="ProductItem__name">{ItemTitle}</h1>
-        <h2 class="ProductItem__copy">抗菌、防臭、速乾性に優れた和紙素材を使用。涼しく軽量で暑くなる季節に適したマスクです。</h2>
-      </div>
-
-      <div class="ProductItem__price">
-        {block:NoItemProperPrice}
-        <span>{ItemPrice}</span>
-        {/block:NoItemProperPrice} {block:ItemEndOfSale}
-        <span class="soldOutText">SOLD OUT</span>
-        {/block:ItemEndOfSale}
-      </div>
-    </div>
-  </article>
-</li>
-<li class="product_list">
   <a href="{ItemPageURL}">
     {block:AppsItemLabel} {AppsItemLabelTag} {/block:AppsItemLabel}
-    <div class="item_meta {block:ItemNowOnSale}{block:NoItemStock}soldOut{/block:NoItemStock}{/block:ItemNowOnSale} {block:ItemEndOfSale}soldOut{/block:ItemEndOfSale}">
+    <div
+      class="item_meta {block:ItemNowOnSale}{block:NoItemStock}soldOut{/block:NoItemStock}{/block:ItemNowOnSale} {block:ItemEndOfSale}soldOut{/block:ItemEndOfSale}">
       {block:HasItemStock} {block:ItemWatingForSale}
       <p class="comingSoon">COMING SOON</p>
       {/block:ItemWatingForSale} {block:ItemNowOnSale}{block:ItemPreOrder}
@@ -785,7 +618,9 @@
     </div>
   </a>
   <div class="image_container">
-    <img src="{block:ItemImage1}{ItemImage1URL-300}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1}" alt="{ItemTitle}" title="{ItemTitle}" class="image_resize" />
+    <img
+      src="{block:ItemImage1}{ItemImage1URL-300}{/block:ItemImage1}{block:NoItemImage1}{ItemNoImageURL}{/block:NoItemImage1}"
+      alt="{ItemTitle}" title="{ItemTitle}" class="image_resize" />
   </div>
 </li>
 {/block:Items} {/block:LoadItemsPage}
