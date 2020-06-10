@@ -5,20 +5,9 @@
   background-size: cover;
   transition: background-image linear 0.24s;
 
-  @include pc-layout {
-    max-height: 560px;
-  }
-
   &:before {
     content: "";
     display: block;
-
-    @include sp-layout {
-      padding-top: 100%;
-    }
-
-    @include pc-layout {
-      padding-top: 56.25%;
-    }
+    padding-top: 56.25%;
   }
 }
