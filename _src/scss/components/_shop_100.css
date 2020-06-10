@@ -1,23 +1,26 @@
 /*====================================================================
- inquiry: お問い合わせ
+ inquiry: 縺雁撫縺�粋繧上○
 ====================================================================*/
 
 .inquirySection {
   padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .inquirySection h1 {
   color: #000;
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 3px;
-  line-height: 26px;
+  line-height: 1.5;
   text-align: left;
   text-transform: capitalize;
 }
 .inquirySection p {
   color: #000;
   font-size: 13px;
-  line-height: 13px;
+  line-height: 1.5;
   text-align: left;
 }
 .inquirySection form {
@@ -139,9 +142,9 @@
 }
 
 /*====================================================================
- common: 対象ページ郡
+ common: 蟇ｾ雎｡繝壹�繧ｸ驛｡
 ====================================================================*/
-/* カスタムデザインのデフォルト色 */
+/* 繧ｫ繧ｹ繧ｿ繝�繝�じ繧､繝ｳ縺ｮ繝�ヵ繧ｩ繝ｫ繝郁牡 */
 .mainHeaderNavColor {
   color: #000;
   font-weight: bold;
@@ -155,7 +158,7 @@
  * about: .tempTop
  *************************************/
 
-/* トップページ */
+/* 繝医ャ繝励�繝ｼ繧ｸ */
 .tempTop {
 }
 
@@ -173,7 +176,7 @@
   font-size: 11px;
 }
 
-/* 送料詳細 */
+/* 騾∵侭隧ｳ邏ｰ */
 #postageInfoLayer p {
   font-size: 11px;
   text-align: left;
@@ -188,7 +191,7 @@
 }
 
 /*====================================================================
-特定商取引・プライバシーポリシー
+迚ｹ螳壼膚蜿門ｼ輔�繝励Λ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ
 ====================================================================*/
 #privacy,
 #law {
@@ -268,11 +271,11 @@
 ====================================================================*/
 @media screen and (max-width: 480px) {
   /**
-		* page: ページ名
-		* about: 関連情報
+		* page: 繝壹�繧ｸ蜷�
+		* about: 髢｢騾｣諠��ｱ
 		*************************************/
 
-  /* クラス構成 */
+  /* 繧ｯ繝ｩ繧ｹ讒区� */
 }
 
 /**
