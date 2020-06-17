@@ -9,7 +9,9 @@
     gap: 16px;
   }
 
-  .column5-pc {
-    grid-template-columns: repeat(5, 1fr);
+  &.column5-pc {
+    @include pc-layout {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 }
