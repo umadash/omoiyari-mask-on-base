@@ -30,6 +30,7 @@
     @include pc-layout {
       display: grid;
       grid-template-columns: 320px 1fr;
+      gap: 32px;
     }
   }
 
@@ -51,7 +52,6 @@
     }
 
     @include pc-layout {
-      padding-left: 32px;
     }
   }
 }
