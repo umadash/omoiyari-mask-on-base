@@ -36,3 +36,10 @@ a {
     clear: both;
   }
 }
+
+#baseMenu {
+  right: 8px !important;
+  .base {
+    display: none !important;
+  }
+}

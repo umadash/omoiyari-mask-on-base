@@ -1,5 +1,8 @@
 .ProductItemList {
   display: grid;
+  @include sp-layout {
+    gap: 32px;
+  }
 
   &.col3-pc {
     @include pc-layout {
@@ -7,10 +10,6 @@
       gap: 40px;
       // width: 80px;
     }
-  }
-
-  &.col3 {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 

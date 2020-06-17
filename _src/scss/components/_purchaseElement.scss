@@ -1,0 +1,17 @@
+.purchaseElement {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    line-height: 1.666;
+    flex-shrink: 0;
+    @include font-size(14);
+
+    @include sp-layout {
+      @include font-size(12);
+    }
+  }
+
+  select {
+  }
+}

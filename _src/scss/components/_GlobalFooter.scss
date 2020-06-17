@@ -8,6 +8,7 @@
   @include sp-layout {
     flex-direction: column;
     padding: 32px 16px 40px;
+    @include font-size(12);
   }
 
   @include pc-layout {
@@ -51,8 +52,10 @@
 
   &__copyright {
     @include font-en-bold;
+    @include font-size(10);
 
     @include sp-layout {
+      text-align: center;
       margin-top: 32px;
     }
   }
