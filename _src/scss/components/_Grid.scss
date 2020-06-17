@@ -9,6 +9,12 @@
     gap: 16px;
   }
 
+  &.column3-sp {
+    @include sp-layout {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   &.column5-pc {
     @include pc-layout {
       grid-template-columns: repeat(5, 1fr);
