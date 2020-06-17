@@ -1,0 +1,15 @@
+.Grid {
+  display: grid;
+
+  @include sp-layout {
+    gap: 32px;
+  }
+
+  @include pc-layout {
+    gap: 16px;
+  }
+
+  .column5-pc {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
