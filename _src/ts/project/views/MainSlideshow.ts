@@ -13,7 +13,7 @@ export default class MainSlideshow {
 
   private wait: boolean;
 
-  constructor($elm: JQuery, interval: number = 5000, shuffle: boolean = false, attr: string = "data-srcs") {
+  constructor($elm: JQuery, interval: number = 7000, shuffle: boolean = false, attr: string = "data-srcs") {
     this.$elm = $elm;
     this.interval = interval;
     this.shuffle = shuffle;
