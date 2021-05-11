@@ -5,7 +5,7 @@
   "dependencies": {
     "acorn": "^6.1.1",
     "dat.gui": "^0.7.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "sass-text-stroke": "^1.0.1",
     "three": "^0.97.0"
   },
