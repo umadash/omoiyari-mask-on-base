@@ -7,7 +7,7 @@
     "dat.gui": "^0.7.3",
     "lodash": "^4.17.15",
     "sass-text-stroke": "^1.0.1",
-    "three": "^0.97.0"
+    "three": "^0.137.0"
   },
   "scripts": {
     "start": "webpack --mode development",
